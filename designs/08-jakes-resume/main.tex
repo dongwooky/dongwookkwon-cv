@@ -1,0 +1,217 @@
+%-------------------------
+% Jake's Resume (LaTeX original)
+% Author: Jake Gutierrez
+% Source: https://github.com/jakegut/resume (MIT)
+% Adapted for Dongwook Kwon
+%------------------------
+
+\documentclass[letterpaper,11pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+% \input{glyphtounicode}  % pdfTeX-only; tectonic uses XeTeX
+
+\pagestyle{fancy}
+\fancyhf{}
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% Adjust margins
+\addtolength{\oddsidemargin}{-0.5in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1in}
+\addtolength{\topmargin}{-.5in}
+\addtolength{\textheight}{1.0in}
+
+\urlstyle{same}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Sections formatting
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+
+% Ensure PDF is machine-readable/ATS parsable (pdfTeX only)
+% \pdfgentounicode=1
+
+%-------------------------
+% Custom commands
+\newcommand{\resumeItem}[1]{
+  \item\small{
+    {#1 \vspace{-2pt}}
+  }
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-2pt}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubSubheading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \textit{\small#1} & \textit{\small #2} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeProjectHeading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \small#1 & #2 \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-4pt}}
+
+\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.15in, label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+%-------------------------------------------
+%%%%%%  RESUME STARTS HERE  %%%%%%%%%%%%%%%%
+\begin{document}
+
+%----------HEADING----------
+\begin{center}
+    \textbf{\Huge \scshape Dongwook Kwon} \\ \vspace{1pt}
+    \small +82 10-6612-9246 $|$
+    \href{mailto:tomiyadragon@gmail.com}{\underline{tomiyadragon@gmail.com}} $|$
+    \href{https://dongwooky.github.io}{\underline{dongwooky.github.io}} $|$
+    \href{https://github.com/dongwooky}{\underline{github.com/dongwooky}} $|$
+    \href{https://linkedin.com/in/dongwooky}{\underline{linkedin.com/in/dongwooky}}
+\end{center}
+
+%-----------EDUCATION-----------
+\section{Education}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {Kwangwoon University}{Seoul, Korea}
+      {Master of Science in Computer Engineering, GPA 4.33 / 4.5 (98.1\%)}{Mar. 2024 -- Feb. 2026}
+    \resumeSubheading
+      {University of Toronto}{Toronto, ON, Canada}
+      {Graduate Research Program, Mechanical \& Industrial Engineering, GPA 3.68 / 4.0}{Jan. 2025 -- Jul. 2025}
+    \resumeSubheading
+      {Kwangwoon University}{Seoul, Korea}
+      {B.S. Electronics \& Communications Engineering, GPA 3.41 / 4.5 (88.1\%)}{Mar. 2019 -- Feb. 2024}
+  \resumeSubHeadingListEnd
+
+%-----------EXPERIENCE-----------
+\section{Experience}
+  \resumeSubHeadingListStart
+
+    \resumeSubheading
+      {AI Engineer, Intelligent Agent Technology Team}{Dec. 2025 -- Present}
+      {Suresoft Technologies}{Seongnam, Korea}
+      \resumeItemListStart
+        \resumeItem{Developing an AI validation system utilizing AI agent--based architectures for enterprise model verification.}
+        \resumeItem{Designing autonomous and collaborative AI agents that verify and evaluate machine-learning models at scale.}
+        \resumeItem{Building agentic AI systems to enable systematic, scalable, and reliable AI verification processes.}
+      \resumeItemListEnd
+
+    \resumeSubheading
+      {Research Assistant}{Aug. 2021 -- Dec. 2025}
+      {Bio-Computing and Machine Learning Laboratory, Kwangwoon University}{Seoul, Korea}
+      \resumeItemListStart
+        \resumeItem{Researched deep-learning algorithms for anomaly detection in time-series data (ECG, cyber-physical systems).}
+        \resumeItem{Co-developed an Active Kill-Switch and Biomarker-Based Defense System for life-threatening IoT medical devices.}
+        \resumeItem{Published in EMNLP 2025 (Oral) and ACL 2026; co-author on two granted Republic of Korea patents.}
+      \resumeItemListEnd
+
+    \resumeSubheading
+      {Visiting Researcher}{Jan. 2025 -- Jul. 2025}
+      {LG Electronics Canada (with University of Toronto)}{Toronto, ON, Canada}
+      \resumeItemListStart
+        \resumeItem{Built an LLM-driven assessment framework for evaluating performance of agentic AI systems.}
+        \resumeItem{Work fed directly into peer-reviewed publications at EMNLP 2025 and ACL 2026.}
+      \resumeItemListEnd
+
+    \resumeSubheading
+      {AI Development Project Participant, Summer Program}{Jul. 2022 -- Aug. 2022}
+      {Qualcomm Institute, University of California San Diego}{San Diego, CA, USA}
+      \resumeItemListStart
+        \resumeItem{Built a personality-based drug-addiction prediction system using machine-learning models.}
+        \resumeItem{Recognized with the program's Achievement Award.}
+      \resumeItemListEnd
+
+  \resumeSubHeadingListEnd
+
+%-----------PROJECTS-----------
+\section{Projects}
+    \resumeSubHeadingListStart
+      \resumeProjectHeading
+        {\textbf{Agentic AI Evaluation Framework} $|$ \emph{Python, LLMs, multi-agent systems}}{2025 -- Present}
+        \resumeItemListStart
+          \resumeItem{Developed an evaluation framework for agentic AI systems leveraging LLMs to assess performance and reliability.}
+        \resumeItemListEnd
+      \resumeProjectHeading
+        {\textbf{AI Intrusion Detection for APR1400 Nuclear Reactors} $|$ \emph{Python, PyTorch, anomaly detection}}{2022 -- Present}
+        \resumeItemListStart
+          \resumeItem{Built an AI-based defense system protecting nuclear power plant control networks from cyber attacks.}
+        \resumeItemListEnd
+      \resumeProjectHeading
+        {\textbf{Quadruped Robot with Vision SLAM} $|$ \emph{ROS, depth camera, SLAM}}{Apr 2022 -- Nov 2022}
+        \resumeItemListStart
+          \resumeItem{Developed autonomous navigation algorithm with SLAM and depth-camera perception for a quadruped platform.}
+        \resumeItemListEnd
+      \resumeProjectHeading
+        {\textbf{Smart Logistics with Computer Vision} $|$ \emph{PyTorch, OpenCV, container tracking}}{Apr 2021 -- Nov 2021}
+        \resumeItemListStart
+          \resumeItem{Logistics detection system with location tracking and stack-layer identification --- Ministerial Gold Award.}
+        \resumeItemListEnd
+    \resumeSubHeadingListEnd
+
+%-----------PUBLICATIONS \& PATENTS-----------
+\section{Publications \& Patents}
+  \resumeSubHeadingListStart
+    \item\small{
+      \textbf{D. Kwon}\textsuperscript{$\dagger$} et al. ``CascadeDebate: Multi-Agent Deliberation for Cost-Aware LLM Cascades.'' \textit{ACL 2026 --- Industry Track (Poster)}. \textsuperscript{$\dagger$}Equal contribution.
+    }
+    \item\small{
+      \textbf{D. Kwon}\textsuperscript{$\dagger$} et al. ``GEMMAS: Graph-based Evaluation Metrics for Multi-Agent Systems.'' \textit{EMNLP 2025 --- Industry Track (Oral)}. \textsuperscript{$\dagger$}Equal contribution.
+    }
+    \item\small{
+      \textbf{D. Kwon} et al. ``Graph-Enhanced Bidirectional GRU for Anomaly Detection in Power Generation Environments.'' Under review at \textit{DMKD} (Springer Nature), 2025.
+    }
+    \item\small{
+      \textbf{D. Kwon} et al. ``Hybrid GAT + Transformer for implantable-device anomaly detection.'' \textit{IBEC 2024}. \textbf{Best Poster Silver.}
+    }
+    \item\small{
+      Patent \textbf{KR 10-2961984} --- Real-time anomaly detection for implantable medical devices (Apr 2026).
+    }
+    \item\small{
+      Patent \textbf{KR 10-2848814} --- GPT API-Based Network Anomaly Detection (Aug 2025).
+    }
+  \resumeSubHeadingListEnd
+
+%-----------TECHNICAL SKILLS-----------
+\section{Technical Skills}
+ \begin{itemize}[leftmargin=0.15in, label={}]
+    \small{\item{
+     \textbf{Languages}{: Python, C/C++, MATLAB, Bash} \\
+     \textbf{Frameworks}{: PyTorch, TensorFlow, Transformers, LangChain, NumPy, Pandas, scikit-learn} \\
+     \textbf{Developer Tools}{: Linux, Docker, Git, CUDA, VS Code} \\
+     \textbf{Domains}{: Agentic AI, multi-agent LLM systems, GNNs, time-series anomaly detection, biomedical signals}
+    }}
+ \end{itemize}
+
+%-------------------------------------------
+\end{document}

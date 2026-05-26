@@ -1,0 +1,219 @@
+% Academic Classic CV (self-contained)
+% Traditional academic look: serif body, justified text, hairline-ruled sections,
+% generous margins. Built on plain article class for maximum compatibility.
+
+\documentclass[11pt,letterpaper]{article}
+
+\usepackage[left=1in,right=1in,top=1in,bottom=1in]{geometry}
+\usepackage{fontspec}
+\usepackage{titlesec}
+\usepackage{enumitem}
+\usepackage{tabularx}
+\usepackage{xcolor}
+\usepackage{fancyhdr}
+\usepackage{ragged2e}
+\usepackage[hidelinks]{hyperref}
+
+% Serif body; Newsreader if installed, otherwise Latin Modern Roman
+\IfFontExistsTF{Newsreader}{
+  \setmainfont{Newsreader}
+}{
+  \setmainfont{Latin Modern Roman}
+}
+
+\definecolor{ink}{HTML}{222222}
+\definecolor{muted}{HTML}{666666}
+\color{ink}
+
+% Section: small-caps tracked, with hairline below
+\titleformat{\section}
+  {\normalfont\large\scshape}
+  {}{0pt}
+  {}
+  [\vspace{-0.5em}{\color{muted}\rule{\linewidth}{0.4pt}}]
+\titlespacing*{\section}{0pt}{1.2em}{0.5em}
+
+\titleformat{\subsection}
+  {\normalfont\itshape\normalsize}
+  {}{0pt}{}
+\titlespacing*{\subsection}{0pt}{0.6em}{0.2em}
+
+\setlist[itemize]{leftmargin=1.2em,itemsep=0.15em,topsep=0.15em,parsep=0pt}
+
+% Entry: title (bold left) + date (right); subtitle (italic left) + location (italic right)
+\newcommand{\entry}[4]{%
+  \vspace{0.35em}\par
+  \noindent\begin{tabularx}{\linewidth}{@{}X r@{}}
+    \textbf{#1} & #2 \\[0.05em]
+    \textit{#3} & \textit{#4}
+  \end{tabularx}\par\vspace{0.1em}
+}
+
+% Honor row: date (left, italic muted) + text (X) + location (right, italic muted)
+\newcommand{\honor}[3]{%
+  \noindent\begin{tabularx}{\linewidth}{@{}l X r@{}}
+    \textit{\color{muted}#1} & #2 & \textit{\color{muted}#3}
+  \end{tabularx}\par\vspace{0.1em}
+}
+
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0.25em}
+
+% Justified text
+\AtBeginDocument{\justifying}
+
+% Footer with page numbers
+\pagestyle{fancy}
+\fancyhf{}
+\fancyfoot[C]{\color{muted}\small Dongwook Kwon \quad{$\cdot$}\quad Curriculum Vitae \quad{$\cdot$}\quad \thepage}
+\renewcommand{\headrulewidth}{0pt}
+\fancypagestyle{plain}{\fancyhf{}\fancyfoot[C]{\color{muted}\small Dongwook Kwon \quad{$\cdot$}\quad Curriculum Vitae \quad{$\cdot$}\quad \thepage}\renewcommand{\headrulewidth}{0pt}}
+
+\begin{document}
+
+% ===== Header =====
+\begin{center}
+  {\fontsize{22pt}{26pt}\selectfont Dongwook Kwon}\par
+  \vspace{0.3em}
+  {\color{muted}\small Room 701, Saebit Hall, 20 Gwangun-ro, Nowon-gu, Seoul 01897, Republic of Korea}\par
+  \vspace{0.2em}
+  {\small (+82)~10-6612-9246 \ {$\cdot$}\ \href{mailto:tomiyadragon@gmail.com}{tomiyadragon@gmail.com} \ {$\cdot$}\ \href{https://dongwooky.github.io}{dongwooky.github.io}}
+\end{center}
+
+\vspace{0.4em}
+
+% ===== Experience =====
+\section{Experience}
+
+\entry{Suresoft Technologies}{Dec.\ 2025 -- Present}{AI Engineer, Intelligent Agent Technology Team}{Seongnam, Gyeonggi, Korea}
+\begin{itemize}
+  \item Developing an AI validation system utilizing AI agent--based architectures.
+  \item Designing and implementing systems to verify and evaluate AI models through autonomous and collaborative AI agents.
+  \item Building agentic AI systems to enable systematic, scalable, and reliable AI verification processes.
+\end{itemize}
+
+\entry{Bio-Computing and Machine Learning Laboratory, Kwangwoon University}{Aug.\ 2021 -- Dec.\ 2025}{Research Assistant}{Seoul, Korea}
+\begin{itemize}
+  \item Conducted research on deep learning algorithms, focusing on anomaly detection in time-series data, including Electrocardiogram (ECG) and Cyber-Physical Systems (CPS).
+  \item Participated in the development of an Active Kill-Switch and Biomarker-Based Defense System for life-threatening IoT medical devices.
+\end{itemize}
+
+\entry{LG Electronics Canada}{Jan.\ 2025 -- Jul.\ 2025}{Research Project}{Toronto, ON, Canada}
+\begin{itemize}
+  \item Participating in the development of an assessment framework for agentic AI systems utilizing LLMs to evaluate performance.
+\end{itemize}
+
+\entry{Qualcomm Institute, University of California San Diego}{Jul.\ 2022 -- Aug.\ 2022}{AI Development Project, Summer Program}{San Diego, CA, USA}
+\begin{itemize}
+  \item Participated in the Personality-Based Drug Addiction Prediction System project.
+  \item Attended seminars on deep learning and machine learning algorithms.
+\end{itemize}
+
+% ===== Education =====
+\section{Education}
+
+\entry{Kwangwoon University}{Mar.\ 2024 -- Feb.\ 2026}{Master of Science in Computer Engineering}{Seoul, Korea}
+\begin{itemize}
+  \item GPA: 4.33/4.5 (Percentage: 98.1\%)
+\end{itemize}
+
+\entry{University of Toronto}{Jan.\ 2025 -- Jul.\ 2025}{Graduate Research Program in Mechanical and Industrial Engineering}{Toronto, ON, Canada}
+\begin{itemize}
+  \item GPA: 3.68/4.0
+\end{itemize}
+
+\entry{Kwangwoon University}{Mar.\ 2019 -- Feb.\ 2024}{Bachelor of Science in Electronics and Communications Engineering}{Seoul, Korea}
+\begin{itemize}
+  \item GPA: 3.41/4.5 (Percentage: 88.1\%)
+\end{itemize}
+
+% ===== Honors & Awards =====
+\section{Honors \& Awards}
+
+\subsection{Major Awards}
+\honor{Aug.\ 2022}{\textbf{Achievement Award}, Qualcomm Institute AI Development Project --- UC San Diego}{United States}
+\honor{Dec.\ 2021}{\textbf{Gold Award (Ministerial Award)}, 2021 Smart Maritime Logistics Project -- Minister of Oceans and Fisheries}{South Korea}
+
+\subsection{Academic Recognition}
+\honor{Nov.\ 2025}{\textbf{Outstanding Student Paper Award}, Conference of the Institute of Electronics and Information Engineers}{South Korea}
+\honor{Nov.\ 2024}{\textbf{Best Poster Award (Silver)}, 10th International Biomedical Engineering Conference (IBEC 2024)}{South Korea}
+\honor{Nov.\ 2023}{\textbf{Outstanding Paper Award}, Conference of the Korean Society of Medical and Biological Engineering}{South Korea}
+
+\subsection{Competitions}
+\honor{Dec.\ 2025}{\textbf{Silver Award}, 23rd Embedded Software Competition (KIISE)}{South Korea}
+\honor{Dec.\ 2022}{\textbf{Bronze Award}, Hanium ICT Mentoring Competition -- FKII}{South Korea}
+\honor{Sep.\ 2022}{\textbf{Excellence Award}, 18th Kwangwoon ICT Exhibition (KWIX) --- Kwangwoon University}{South Korea}
+\honor{Oct.\ 2021}{\textbf{Grand Prize}, MY (Multi-Y) Capstone Design Competition --- Kwangwoon University}{South Korea}
+
+% ===== Projects =====
+\section{Funded Research Projects}
+
+\entry{Agentic AI Evaluation Framework}{Jan.\ 2025 -- Present}{LG Electronics Canada}{Toronto, ON, Canada}
+\begin{itemize}
+  \item Developed an evaluation framework for agentic AI systems using LLMs to assess performance.
+\end{itemize}
+
+\entry{AI-based Intrusion Detection and Attack Packet Crafting Technologies for APR1400}{Jul.\ 2022 -- Present}{Sejong University}{Seoul, Korea}
+\begin{itemize}
+  \item Developed an AI defense system to protect nuclear power plants from cyber attacks.
+\end{itemize}
+
+\entry{Quadruped Robot Using Vision SLAM with a Depth Camera}{Apr.\ 2022 -- Nov.\ 2022}{Ministry of Science and ICT}{Seoul, Korea}
+\begin{itemize}
+  \item Developed an autonomous quadruped robot using a navigation algorithm with SLAM and a depth camera.
+\end{itemize}
+
+\entry{Personality-Based Drug Addiction Prediction System}{Jul.\ 2022 -- Aug.\ 2022}{Qualcomm Institute, UC San Diego}{San Diego, CA, USA}
+\begin{itemize}
+  \item Developed a personality-based drug addiction prediction system using a machine learning model.
+\end{itemize}
+
+\entry{Active Kill-Switch and Biomarker-Based Defense System for Life-Threatening IoT Medical Devices}{Sep.\ 2021 -- Dec.\ 2022}{Kookmin University}{Seoul, Korea}
+\begin{itemize}
+  \item Developed a security system for heart implant devices using an anomaly detection algorithm.
+\end{itemize}
+
+\entry{Smart Logistics System Using Computer Vision}{Apr.\ 2021 -- Nov.\ 2021}{Ministry of Oceans and Fisheries}{Seoul, Korea}
+\begin{itemize}
+  \item Developed a logistics detection system incorporating location tracking and stack-layer identification for containers.
+\end{itemize}
+
+\entry{Smart Kitchen IoT System Utilizing Computer Vision and Deep Learning}{May 2021 -- Oct.\ 2021}{Kwangwoon University}{Seoul, Korea}
+\begin{itemize}
+  \item Developed a cloud IoT platform featuring a system for classifying groceries in the fridge and an OCR receipt program.
+\end{itemize}
+
+% ===== Publications =====
+\section{Publications}
+
+\subsection{Journal Articles}
+\begin{itemize}
+  \item Y.~Nam, J.~Lee, H.~Lee, \textbf{D.~Kwon}, M.~Yeo, S.~Kim, R.~Sohn, and C.~Park, ``Designing a remote photoplethysmography-based heart rate estimation algorithm during a treadmill exercise,'' \emph{Electronics}, vol.~14, no.~5, p.~890, 2025.
+  \item \textbf{D.~Kwon}, Y.~Kang, J.~Lee, Y.~Nam, J.~Won, K.~K.~Kim, D.~D.~Kim, and C.~Park, ``Graph-Enhanced Bidirectional GRU for Anomaly Detection in Power Generation Environments,'' under review at \emph{Data Mining and Knowledge Discovery} (Springer Nature), 2025.
+\end{itemize}
+
+\subsection{Conference Papers}
+\begin{itemize}
+  \item R.~Chang$^{\dagger}$, \textbf{D.~Kwon}$^{\dagger}$, J.~Lee$^{\dagger}$, and N.~Verma, ``CascadeDebate: Multi-Agent Deliberation for Cost-Aware LLM Cascades,'' in \emph{Proc.~64th Annu.\ Meeting Assoc.\ Comput.\ Linguistics (ACL) -- Industry Track (Poster)}, 2026.\ \ $^{\dagger}$Equal contribution.
+  \item J.~Lee$^{\dagger}$, R.~Chang$^{\dagger}$, \textbf{D.~Kwon}$^{\dagger}$, H.~Singh, and N.~Verma, ``GEMMAS: Graph-based Evaluation Metrics for Multi Agent Systems,'' in \emph{Proceedings of the EMNLP 2025 Industry Track (Oral)}, 2025.\ \ $^{\dagger}$Equal contribution.
+  \item \textbf{D.~Kwon}, M.~Kim, Y.~Kang, J.~Lee, and C.~Park, ``Hybrid neural network model for anomaly detection in implantable devices using graph attention networks and transformers,'' in \emph{Proc.\ 10th Int.\ Biomed.\ Eng.\ Conf.\ (IBEC)}, 2024.\ \textbf{Best Poster Award -- Silver.}
+  \item \textbf{D.~Kwon}, Y.~Kang, and C.~Park, ``Enhancing medical device security with GNN-GRU anomaly detection model,'' in \emph{Proc.\ 62nd KOSOMBE Autumn Conf.}, pp.~204--205, 2023.\ \textbf{Outstanding Paper Award.}
+\end{itemize}
+
+% ===== Patents =====
+\section{Patents}
+\begin{itemize}
+  \item \textbf{Issued Patent}, ``Method for Implantable Medical Device to Detect Anomaly in Real Time,'' Patent No.\ KR 10-2961984, Issued on April 30, 2026.
+  \item \textbf{Issued Patent}, ``GPT API-Based Network Anomaly Detection,'' Patent No.\ KR 10-2848814, Issued on August 18, 2025.
+\end{itemize}
+
+% ===== Leadership =====
+\section{Leadership Experience}
+\begin{itemize}
+  \item \textbf{President}, Kwangwoon International Student Association --- Lead intercultural programs and student engagement initiatives.
+  \item \textbf{Director of Filming and Editing}, Kwangwoon Broadcasting Center (KWBC) --- Oversaw media production and content delivery.
+  \item \textbf{Class Representative}, Dept.\ of Electronics and Communications Engineering --- Represented student interests in academic affairs.
+  \item \textbf{Executive Member}, Amateur Radio Club --- Organized radio workshops and technical exhibitions.
+\end{itemize}
+
+\end{document}

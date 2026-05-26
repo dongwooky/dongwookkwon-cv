@@ -1,0 +1,139 @@
+%!TEX TS-program = xelatex
+% Upstream Deedy Resume (OpenFonts variant) by Debarghya Das
+% Source: https://github.com/deedy/Deedy-Resume (Apache 2.0)
+% Trimmed to fit Deedy's one-page constraint.
+
+\documentclass[]{deedy-resume-openfont}
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhf{}
+
+\begin{document}
+
+\lastupdated
+
+\namesection{Dongwook}{Kwon}{
+  \urlstyle{same}\href{https://dongwooky.github.io}{dongwooky.github.io} $|$ \href{mailto:tomiyadragon@gmail.com}{tomiyadragon@gmail.com} \\
+  +82 10-6612-9246 $|$ \href{https://github.com/dongwooky}{github.com/dongwooky} $|$ \href{https://linkedin.com/in/dongwooky}{in/dongwooky}
+}
+
+\begin{minipage}[t]{0.33\textwidth}
+
+\section{Education}
+\subsection{Kwangwoon Univ.}
+\descript{M.S.\ Computer Engineering}
+\location{Feb 2026 $|$ Seoul, Korea}
+GPA 4.33 / 4.5 (98.1\%)
+\sectionsep
+
+\subsection{Univ. of Toronto}
+\descript{Grad Research, Mech \& Ind. Eng.}
+\location{Jul 2025 $|$ Toronto}
+GPA 3.68 / 4.0
+\sectionsep
+
+\subsection{Kwangwoon Univ.}
+\descript{B.S.\ Electronics \& Comms}
+\location{Feb 2024 $|$ Seoul, Korea}
+GPA 3.41 / 4.5 (88.1\%)
+\sectionsep
+
+\section{Links}
+Github://~ \href{https://github.com/dongwooky}{\bf dongwooky} \\
+LinkedIn://~ \href{https://linkedin.com/in/dongwooky}{\bf dongwooky}
+\sectionsep
+
+\section{Skills}
+\subsection{Daily}
+Python \textbullet{} PyTorch \textbullet{} Transformers \textbullet{} LangChain \textbullet{} Docker \textbullet{} CUDA
+\sectionsep
+
+\subsection{Familiar}
+C/C++ \textbullet{} MATLAB \textbullet{} TensorFlow \textbullet{} scikit-learn
+\sectionsep
+
+\subsection{Domains}
+Agentic AI \textbullet{} Multi-Agent LLM \textbullet{} GNN \textbullet{} Anomaly Detection
+\sectionsep
+
+\section{Awards}
+2025 \textbar{} \textbf{Silver}, KIISE Embedded SW \\
+2025 \textbar{} \textbf{Outstanding}, IEIE Conf. \\
+2024 \textbar{} \textbf{Silver}, IBEC Best Poster \\
+2023 \textbar{} \textbf{Outstanding}, KOSOMBE \\
+2022 \textbar{} \textbf{Achievement}, UCSD QC Inst. \\
+2021 \textbar{} \textbf{Ministerial Gold}, Maritime Logistics
+
+\sectionsep
+
+\section{Patents}
+KR 10-2961984 \\
+\textit{Real-time anomaly detection \\ for implantable devices} \\[0.3em]
+KR 10-2848814 \\
+\textit{GPT API-based network \\ anomaly detection}
+
+\end{minipage}
+\hfill
+\begin{minipage}[t]{0.66\textwidth}
+
+\section{Experience}
+
+\runsubsection{Suresoft Technologies}
+\descript{$|$ AI Engineer, Intelligent Agent Team}
+\location{Dec 2025 -- Present $|$ Seongnam, Korea}
+\begin{tightemize}
+\item Developing AI validation system using agentic architectures for enterprise model verification.
+\item Designing autonomous and collaborative agents for systematic AI verification.
+\end{tightemize}
+\sectionsep
+
+\runsubsection{Bio-Computing \& ML Lab, Kwangwoon Univ.}
+\descript{$|$ Research Assistant}
+\location{Aug 2021 -- Dec 2025 $|$ Seoul, Korea}
+\begin{tightemize}
+\item Deep-learning anomaly detection in time-series (ECG, cyber-physical systems).
+\item EMNLP 2025 (Oral), ACL 2026; two granted KR patents.
+\end{tightemize}
+\sectionsep
+
+\runsubsection{LG Electronics Canada (w/ U. of Toronto)}
+\descript{$|$ Visiting Researcher}
+\location{Jan 2025 -- Jul 2025 $|$ Toronto, Canada}
+\begin{tightemize}
+\item Built LLM-driven assessment framework for evaluating agentic AI systems.
+\end{tightemize}
+\sectionsep
+
+\runsubsection{Qualcomm Institute, UCSD}
+\descript{$|$ AI Development (Summer)}
+\location{Jul -- Aug 2022 $|$ San Diego, CA}
+\begin{tightemize}
+\item Personality-based drug-addiction prediction. Achievement Award.
+\end{tightemize}
+\sectionsep
+
+\section{Research \& Projects}
+
+\runsubsection{Agentic AI Evaluation Framework} \descript{$|$ LG Canada}
+\location{2025 -- Present}
+LLM-based evaluation framework for agentic AI systems.
+\sectionsep
+
+\runsubsection{AI Intrusion Detection for APR1400} \descript{$|$ Sejong U.}
+\location{2022 -- Present}
+AI defense for nuclear plant control networks.
+\sectionsep
+
+\runsubsection{Quadruped Robot, Vision SLAM} \descript{$|$ MSIT}
+\location{Apr -- Nov 2022}
+Autonomous SLAM + depth-camera navigation.
+\sectionsep
+
+\section{Publications}
+\textbf{D.~Kwon}$^{\dagger}$ et al.\ ``CascadeDebate: Multi-Agent Deliberation for Cost-Aware LLM Cascades,'' \emph{ACL 2026 --- Industry (Poster)}.\\[0.15em]
+\textbf{D.~Kwon}$^{\dagger}$ et al.\ ``GEMMAS: Graph-based Evaluation Metrics for Multi-Agent Systems,'' \emph{EMNLP 2025 --- Industry (Oral)}.\\[0.15em]
+\textbf{D.~Kwon} et al.\ ``Graph-Enhanced Bi-GRU for Anomaly Detection in Power Generation,'' \emph{DMKD} (under review).\\[0.15em]
+\textbf{D.~Kwon} et al.\ ``Hybrid GAT + Transformer for implantable-device anomaly,'' \emph{IBEC 2024} --- Best Poster Silver.
+
+\end{minipage}
+\end{document}
