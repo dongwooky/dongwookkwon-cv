@@ -2,7 +2,7 @@
 
 *AI Engineer ▪ Agentic AI Systems & LLM Evaluation*
 
-Room 701, Saebit Hall, 20 Gwangun-ro, Nowon-gu, Seoul 01897, Republic of Korea
+11F, 37, Geumto-ro 80beon-gil, Sujeong-gu, Seongnam-si, Gyeonggi-do, 13453, South Korea
 
 (+82) 10-6612-9246 | tomiyadragon@gmail.com | dongwooky.github.io | dongwooky | dongwooky | dongwooky
 
