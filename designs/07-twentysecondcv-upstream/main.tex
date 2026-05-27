@@ -1,0 +1,141 @@
+% Upstream Twenty Seconds Curriculum Vitae by Carmine Spagnuolo
+% Source: https://github.com/spagnuolocarmine/TwentySecondsCurriculumVitae-LaTex (MIT)
+% Class copied locally. No profile photo set (would normally go in left sidebar).
+
+\documentclass[]{twentysecondcv}
+
+\begin{document}
+
+%%%%%%%%%%%%%%%%%%%%%%
+%% PROFILE SIDE BAR %%
+%%%%%%%%%%%%%%%%%%%%%%
+
+% \profilepic{...}    % omit photo (placeholder slot left blank)
+\cvname{Dongwook Kwon}
+\cvjobtitle{AI Engineer}
+\cvaddress{Seoul, Republic of Korea}
+\cvnumberphone{+82 10-6612-9246}
+\cvmail{tomiyadragon@gmail.com}
+\cvsite{dongwooky.github.io}
+
+\aboutme{%
+AI engineer focused on agentic AI systems and LLM-based multi-agent
+evaluation. Research background in deep-learning anomaly detection for
+time-series data (ECG, cyber-physical systems). Published at EMNLP 2025
+(Oral) and ACL 2026; co-author on two granted Republic of Korea patents.
+}
+
+% Skills bar (label / level 0--6)
+\skills{%
+  {Python/6},
+  {PyTorch \& Transformers/5.5},
+  {C/C++/4.5},
+  {LangChain \& LLMs/5},
+  {Linux \& Docker/5},
+  {CUDA/4},
+  {MATLAB/4}
+}
+
+% Skills text (compact below the bar)
+\skillstext{{Agentic AI/5.5},{Multi-Agent LLM/5},{GNN/4.5},{Anomaly Detection/5}}
+
+\makeprofile
+
+%%%%%%%%%%%%%%%%%%
+%%%%%% BODY %%%%%%
+%%%%%%%%%%%%%%%%%%
+
+\section{about}
+AI Engineer at Suresoft Technologies' Intelligent Agent Technology Team.
+Master's in Computer Engineering at Kwangwoon University. Visiting research
+at LG Electronics Canada with the University of Toronto.
+
+\section{education}
+\begin{twenty}
+  \twentyitem
+    {2024--2026}
+    {M.S.\ {\normalfont in Computer Engineering}}
+    {Kwangwoon University, Seoul}
+    {GPA 4.33 / 4.5 (98.1\%). Bio-Computing \& Machine Learning Laboratory.}
+  \twentyitem
+    {2025}
+    {Graduate Research Program}
+    {University of Toronto, Canada}
+    {Mechanical and Industrial Engineering. GPA 3.68 / 4.0.}
+  \twentyitem
+    {2019--2024}
+    {B.S.\ {\normalfont in Electronics and Communications Engineering}}
+    {Kwangwoon University, Seoul}
+    {GPA 3.41 / 4.5 (88.1\%).}
+\end{twenty}
+
+\section{experience}
+\begin{twenty}
+  \twentyitem
+    {2025--Now}
+    {AI Engineer, Intelligent Agent Technology Team}
+    {Suresoft Technologies, Seongnam}
+    {Developing an AI validation system using agentic AI architectures for enterprise model verification. Designing autonomous and collaborative agents that verify and evaluate ML models at scale.}
+  \twentyitem
+    {2021--2025}
+    {Research Assistant}
+    {Bio-Computing \& ML Lab, Kwangwoon U.}
+    {Deep-learning anomaly detection in time-series (ECG, cyber-physical systems). Co-developed an Active Kill-Switch and Biomarker-Based Defense System for IoT medical devices.}
+  \twentyitem
+    {2025}
+    {Visiting Researcher}
+    {LG Electronics Canada (with U.\ of Toronto)}
+    {Built an LLM-driven assessment framework for evaluating performance of agentic AI systems.}
+  \twentyitem
+    {2022}
+    {AI Development Project, Summer Program}
+    {Qualcomm Institute, UC San Diego}
+    {Personality-based drug-addiction prediction system. Recognized with the program's Achievement Award.}
+\end{twenty}
+
+\section{publications}
+\begin{twentyshort}
+  \twentyitemshort
+    {2026}
+    {\textbf{D. Kwon}$^{\dagger}$ et al.\ ``CascadeDebate: Multi-Agent Deliberation for Cost-Aware LLM Cascades.'' \emph{ACL 2026 --- Industry (Poster)}.}
+  \twentyitemshort
+    {2025}
+    {\textbf{D. Kwon}$^{\dagger}$ et al.\ ``GEMMAS: Graph-based Evaluation Metrics for Multi-Agent Systems.'' \emph{EMNLP 2025 --- Industry (Oral)}.}
+  \twentyitemshort
+    {2025}
+    {\textbf{D. Kwon} et al.\ ``Graph-Enhanced Bi-GRU for Anomaly Detection in Power Generation Environments.'' \emph{DMKD} (Springer Nature, under review).}
+  \twentyitemshort
+    {2024}
+    {\textbf{D. Kwon} et al.\ ``Hybrid GAT + Transformer for implantable-device anomaly detection.'' \emph{IBEC 2024} --- Best Poster Silver.}
+\end{twentyshort}
+
+\section{awards}
+\begin{twentyshort}
+  \twentyitemshort
+    {2025}
+    {\textbf{Silver Award}, 23rd Embedded Software Competition (KIISE).}
+  \twentyitemshort
+    {2025}
+    {\textbf{Outstanding Student Paper}, IEIE Conference.}
+  \twentyitemshort
+    {2024}
+    {\textbf{Best Poster Silver}, IBEC 2024.}
+  \twentyitemshort
+    {2022}
+    {\textbf{Achievement Award}, Qualcomm Institute AI Project --- UC San Diego.}
+  \twentyitemshort
+    {2021}
+    {\textbf{Gold (Ministerial)}, Smart Maritime Logistics Project --- Minister of Oceans and Fisheries.}
+\end{twentyshort}
+
+\section{patents}
+\begin{twentyshort}
+  \twentyitemshort
+    {Apr 2026}
+    {KR 10-2961984 --- Real-time anomaly detection for implantable medical devices.}
+  \twentyitemshort
+    {Aug 2025}
+    {KR 10-2848814 --- GPT API-Based Network Anomaly Detection.}
+\end{twentyshort}
+
+\end{document}
