@@ -1,0 +1,139 @@
+%!TEX TS-program = xelatex
+%!TEX encoding = UTF-8 Unicode
+% Upstream Awesome-CV (posquit0) — class file copied locally unmodified.
+% Source: https://github.com/posquit0/Awesome-CV (CC BY-SA 4.0)
+% GENERATED FROM data/cv.yaml — edit yaml + run scripts/sync.py, not this file.
+
+\documentclass[11pt, letterpaper]{awesome-cv}
+
+\geometry{left=1.4cm, top=.8cm, right=1.4cm, bottom=1.8cm, footskip=.5cm}
+
+\colorlet{awesome}{awesome-red}
+\setbool{acvSectionColorHighlight}{true}
+\renewcommand{\acvHeaderSocialSep}{\quad\textbar\quad}
+
+\name{<< person.first_name >>}{<< person.last_name >>}
+\position{<< person.position | replace("▪", "{\\enskip\\cdotp\\enskip}") >>}
+\address{<< person.address_line1 >>, << person.address_line2 >>}
+\mobile{(<< person.phone.split(" ")[0] >>) << person.phone.split(" ", 1)[1] >>}
+\email{<< person.email >>}
+\homepage{<< person.homepage >>}
+\github{<< person.github >>}
+\linkedin{<< person.linkedin >>}
+
+\begin{document}
+
+\makecvheader[C]
+\makecvfooter
+  {\today}
+  {<< person.first_name >> << person.last_name >>~~~·~~~Curriculum Vitae}
+  {\thepage}
+
+%-------------------------------------------------------------------------------
+\cvsection{Experience}
+\begin{cventries}
+  <% for e in experience %>
+  \cventry
+    {<< e.role >>}
+    {<< e.org >>}
+    {<< e.location >>}
+    {<< e.start | replace(". ", ".\\ ") >> - << e.end | replace(". ", ".\\ ") >>}
+    {
+      \begin{cvitems}
+        <% for b in e.bullets %>
+        \item {<< b | replace("--", "-") >>}
+        <% endfor %>
+      \end{cvitems}
+    }
+  <% endfor %>
+\end{cventries}
+
+%-------------------------------------------------------------------------------
+\cvsection{Education}
+\begin{cventries}
+  <% for ed in education %>
+  \cventry
+    {<< ed.degree >>}
+    {<< ed.org >>}
+    {<< ed.location >>}
+    {<< ed.start | replace(". ", ".\\ ") >> - << ed.end | replace(". ", ".\\ ") >>}
+    {
+      \begin{cvitems}
+        \item {GPA: << ed.gpa | replace("%", "\\%") >>}
+      \end{cvitems}
+    }
+  <% endfor %>
+\end{cventries}
+
+%-------------------------------------------------------------------------------
+\cvsection{Honors \& Awards}
+
+\cvsubsection{Major Awards}
+\begin{cvhonors}
+  <% for h in honors.major_awards %>
+  \cvhonor{<< h.name >>}{<< h.event >>}{<< h.country >>}{<< h.date | replace(". ", ".\\ ") >>}
+  <% endfor %>
+\end{cvhonors}
+
+\cvsubsection{Academic Recognition}
+\begin{cvhonors}
+  <% for h in honors.academic_recognition %>
+  \cvhonor{<< h.name >>}{<< h.event >>}{<< h.country >>}{<< h.date | replace(". ", ".\\ ") >>}
+  <% endfor %>
+\end{cvhonors}
+
+\cvsubsection{Competitions}
+\begin{cvhonors}
+  <% for h in honors.competitions %>
+  \cvhonor{<< h.name >>}{<< h.event >>}{<< h.country >>}{<< h.date | replace(". ", ".\\ ") >>}
+  <% endfor %>
+\end{cvhonors}
+
+%-------------------------------------------------------------------------------
+\cvsection{Funded Research Projects}
+\begin{cventries}
+  <% for p in projects %>
+  \cventry{<< p.title >>}{<< p.org >>}{<< p.location >>}{<< p.start | replace(". ", ".\\ ") >> - << p.end | replace(". ", ".\\ ") >>}
+  {\begin{cvitems}\item {<< p.description >>}\end{cvitems}}
+
+  <% endfor %>
+\end{cventries}
+
+%-------------------------------------------------------------------------------
+\cvsection{Publications}
+
+\cvsubsection{Journal Articles}
+\begin{cvparagraph}
+<% for pub in publications.journals %>
+<< pub.authors >>, ``<< pub.title >>,'' <% if pub.details == "under review" %>under review at \emph{<< pub.venue >>}, << pub.year >><% else %>\emph{<< pub.venue >>}, << pub.details >><% endif %>.
+
+<% endfor %>
+\end{cvparagraph}
+
+\cvsubsection{Conference Papers}
+\begin{cvparagraph}
+<% for pub in publications.conferences %>
+<< pub.authors >>, ``<< pub.title >>,'' in \emph{<< pub.venue >> --- << pub.venue_short.split(" --- ")[1] if " --- " in pub.venue_short else "" >>}, << pub.year >>.<% if pub.note is defined %> << pub.note >><% endif %><% if pub.award is defined %> \textbf{<< pub.award >>}<% endif %>
+
+<% endfor %>
+\end{cvparagraph}
+
+%-------------------------------------------------------------------------------
+\cvsection{Patents}
+\begin{cvparagraph}
+<% for pat in patents %>
+\textbf{Issued Patent}, ``<< pat.title >>,'' Patent No. << pat.number >>, Issued on << pat.date >>.
+
+<% endfor %>
+\end{cvparagraph}
+
+%-------------------------------------------------------------------------------
+\cvsection{Leadership Experience}
+\begin{cvparagraph}
+<% for l in leadership %>
+\textbf{<< l.role >>}, << l.org >> --- << l.description >>
+
+<% endfor %>
+\end{cvparagraph}
+
+\end{document}

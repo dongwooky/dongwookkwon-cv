@@ -1,0 +1,104 @@
+% Upstream ModernCV by Xavier Danaux (CTAN)
+% Source: https://ctan.org/pkg/moderncv (LPPL)
+% Class shipped with TeX Live — no local .cls copy needed.
+% GENERATED FROM data/cv.yaml — edit yaml + run scripts/sync.py, not this file.
+
+\documentclass[11pt,letterpaper,sans]{moderncv}
+
+% Styles: classic, casual, banking, oldstyle, fancy
+\moderncvstyle{banking}
+% Colors: blue, orange, green, red, purple, grey, black
+\moderncvcolor{blue}
+
+\usepackage[scale=0.82,top=1.0in,bottom=1.0in]{geometry}
+\usepackage{enumitem}
+\setlist[itemize]{leftmargin=*,itemsep=0.2em,topsep=0.1em}
+
+% Widen the date column (left margin) to fit longer date ranges
+\setlength{\hintscolumnwidth}{1.6in}
+\AtBeginDocument{\recomputelengths}
+
+% --- Personal data ---
+\name{<< person.first_name >>}{<< person.last_name >>}
+\title{<< person.position | replace("▪", "\\textbullet\\") >>}
+\address{<< person.address_line1 >>}{<< person.address_line2 >>}{}
+\phone[mobile]{<< person.phone | replace(" ", "~") >>}
+\email{<< person.email >>}
+\homepage{<< person.homepage >>}
+\social[github]{<< person.github >>}
+\social[linkedin]{<< person.linkedin >>}
+
+\begin{document}
+\makecvtitle
+
+%---------------- EXPERIENCE ----------------
+\section{Experience}
+
+<% for e in experience %>
+\cventry{<< e.start | replace(". ", ".\\ ") >> -- << e.end | replace(". ", ".\\ ") >>}{<< e.role >>}{<< e.org >>}{<< e.location >>}{}{%
+  \begin{itemize}
+    <% for b in e.bullets %>
+    \item << b >>
+    <% endfor %>
+  \end{itemize}}
+
+<% endfor %>
+%---------------- EDUCATION ----------------
+\section{Education}
+
+<% for ed in education %>
+\cventry{<< ed.start | replace(". ", ".\\ ") >> -- << ed.end | replace(". ", ".\\ ") >>}{<< ed.degree_short | replace(". ", ".\\ ") >>}{<< ed.org >>}{<< ed.location >>}{\textit{GPA: << ed.gpa | replace("%", "\\%") >>}}{}
+
+<% endfor %>
+%---------------- HONORS & AWARDS ----------------
+\section{Honors \& Awards}
+
+\subsection{Major Awards}
+<% for h in honors.major_awards %>
+\cvitem{<< h.date | replace(". ", ".\\ ") >>}{\textbf{<< h.name >>}, << h.event >> \hfill \textit{<< h.country >>}}
+<% endfor %>
+
+\subsection{Academic Recognition}
+<% for h in honors.academic_recognition %>
+\cvitem{<< h.date | replace(". ", ".\\ ") >>}{\textbf{<< h.name >>}, << h.event >> \hfill \textit{<< h.country >>}}
+<% endfor %>
+
+\subsection{Competitions}
+<% for h in honors.competitions %>
+\cvitem{<< h.date | replace(". ", ".\\ ") >>}{\textbf{<< h.name >>}, << h.event >> \hfill \textit{<< h.country >>}}
+<% endfor %>
+
+%---------------- PROJECTS ----------------
+\section{Funded Research Projects}
+
+<# ModernCV shows the first 5 projects (skip Smart Kitchen IoT for length). #>
+<% for p in projects[:5] %>
+\cventry{<< p.start | replace(". ", ".\\ ") >> -- << p.end | replace(". ", ".\\ ") >>}{<< p.title_short if p.title_short is defined else p.title >>}{<< p.org >>}{<< p.location >>}{}{<< p.description >>}
+
+<% endfor %>
+%---------------- PUBLICATIONS ----------------
+\section{Publications}
+
+\subsection{Journal Articles}
+<% for pub in publications.journals %>
+\cvitem{<< pub.year >>}{<< pub.authors >>, ``<< pub.title >>,'' <% if pub.details == "under review" %>under review at \emph{<< pub.venue >>}, << pub.year >><% else %>\emph{<< pub.venue >>}, << pub.details >><% endif %>.}
+<% endfor %>
+
+\subsection{Conference Papers}
+<% for pub in publications.conferences %>
+\cvitem{<< pub.year >>}{<< pub.authors >>, ``<< pub.title >>,'' in \emph{<< pub.venue >>}<% if pub.details is defined %>, << pub.details >><% endif %>, << pub.year >>.<% if pub.note is defined %>\ \ << pub.note >><% endif %><% if pub.award is defined %>\ \textbf{<< pub.award >>}<% endif %>}
+<% endfor %>
+
+%---------------- PATENTS ----------------
+\section{Patents}
+<% for pat in patents %>
+\cvitem{<< pat.date_short >>}{\textbf{Issued Patent}, ``<< pat.title >>,'' << pat.number >>.}
+<% endfor %>
+
+%---------------- LEADERSHIP ----------------
+\section{Leadership Experience}
+<% for l in leadership %>
+\cvitem{}{\textbf{<< l.role >>}, << l.org >> --- << l.description >>}
+<% endfor %>
+
+\end{document}

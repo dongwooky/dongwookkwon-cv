@@ -1,10 +1,7 @@
 %-------------------------
 % Upstream Jake Gutierrez Resume Template
 % Source: https://github.com/jakegut/resume (MIT)
-% Single-file template — no .cls to ship.
-% Adapted with Dongwook Kwon's content. The only modification vs upstream is
-% wrapping the pdfTeX-only `glyphtounicode` / `\pdfgentounicode` lines in an
-% \ifPDFTeX guard so it also compiles cleanly under XeLaTeX.
+% GENERATED FROM data/cv.yaml — edit yaml + run scripts/sync.py, not this file.
 %------------------------
 
 \documentclass[letterpaper,11pt]{article}
@@ -67,21 +64,12 @@
     \end{tabular*}\vspace{-7pt}
 }
 
-\newcommand{\resumeSubSubheading}[2]{
-    \item
-    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
-      \textit{\small#1} & \textit{\small #2} \\
-    \end{tabular*}\vspace{-7pt}
-}
-
 \newcommand{\resumeProjectHeading}[2]{
     \item
     \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
       \small#1 & #2 \\
     \end{tabular*}\vspace{-7pt}
 }
-
-\newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-4pt}}
 
 \renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
 
@@ -109,13 +97,13 @@
   \resumeSubHeadingListStart
     \resumeSubheading
       {Kwangwoon University}{Seoul, Korea}
-      {Master of Science in Computer Engineering, GPA 4.33 / 4.5 (98.1\%)}{Mar. 2024 -- Feb. 2026}
+      {M.S.\ in Computer Engineering, GPA 4.33 / 4.5 (98.1\%)}{Mar.\ 2024 -- Feb.\ 2026}
     \resumeSubheading
       {University of Toronto}{Toronto, ON, Canada}
-      {Graduate Research Program, Mechanical \& Industrial Engineering, GPA 3.68 / 4.0}{Jan. 2025 -- Jul. 2025}
+      {Graduate Research Program, GPA 3.68 / 4.0}{Jan.\ 2025 -- Jul.\ 2025}
     \resumeSubheading
       {Kwangwoon University}{Seoul, Korea}
-      {B.S. Electronics \& Communications Engineering, GPA 3.41 / 4.5 (88.1\%)}{Mar. 2019 -- Feb. 2024}
+      {B.S.\ in Electronics and Communications Engineering, GPA 3.41 / 4.5 (88.1\%)}{Mar.\ 2019 -- Feb.\ 2024}
   \resumeSubHeadingListEnd
 
 
@@ -124,7 +112,7 @@
   \resumeSubHeadingListStart
 
     \resumeSubheading
-      {AI Engineer, Intelligent Agent Technology Team}{Dec. 2025 -- Present}
+      {AI Engineer, Intelligent Agent Technology Team}{Dec.\ 2025 -- Present}
       {Suresoft Technologies}{Seongnam, Korea}
       \resumeItemListStart
         \resumeItem{Developing an AI validation system utilizing AI agent--based architectures for enterprise model verification.}
@@ -133,8 +121,8 @@
       \resumeItemListEnd
 
     \resumeSubheading
-      {Research Assistant}{Aug. 2021 -- Dec. 2025}
-      {Bio-Computing and Machine Learning Laboratory, Kwangwoon University}{Seoul, Korea}
+      {Research Assistant}{Aug.\ 2021 -- Dec.\ 2025}
+      {Bio-Computing \& ML Lab, Kwangwoon University}{Seoul, Korea}
       \resumeItemListStart
         \resumeItem{Researched deep-learning algorithms for anomaly detection in time-series data (ECG, cyber-physical systems).}
         \resumeItem{Co-developed an Active Kill-Switch and Biomarker-Based Defense System for life-threatening IoT medical devices.}
@@ -142,16 +130,16 @@
       \resumeItemListEnd
 
     \resumeSubheading
-      {Visiting Researcher}{Jan. 2025 -- Jul. 2025}
-      {LG Electronics Canada (with University of Toronto)}{Toronto, ON, Canada}
+      {Visiting Researcher}{Jan.\ 2025 -- Jul.\ 2025}
+      {LG Electronics Canada}{Toronto, ON, Canada}
       \resumeItemListStart
         \resumeItem{Built an LLM-driven assessment framework for evaluating performance of agentic AI systems.}
         \resumeItem{Work fed directly into peer-reviewed publications at EMNLP 2025 and ACL 2026.}
       \resumeItemListEnd
 
     \resumeSubheading
-      {AI Development Project Participant, Summer Program}{Jul. 2022 -- Aug. 2022}
-      {Qualcomm Institute, University of California San Diego}{San Diego, CA, USA}
+      {AI Development Project Participant, Summer Program}{Jul.\ 2022 -- Aug.\ 2022}
+      {Qualcomm Institute, UC San Diego}{San Diego, CA, USA}
       \resumeItemListStart
         \resumeItem{Built a personality-based drug-addiction prediction system using machine-learning models.}
         \resumeItem{Recognized with the program's Achievement Award.}
@@ -164,24 +152,24 @@
 \section{Projects}
     \resumeSubHeadingListStart
       \resumeProjectHeading
-          {\textbf{Agentic AI Evaluation Framework} $|$ \emph{Python, LLMs, multi-agent systems}}{2025 -- Present}
+          {\textbf{Agentic AI Evaluation Framework} $|$ \emph{Python, LLMs, multi-agent systems}}{Jan. 2025 -- Present}
           \resumeItemListStart
-            \resumeItem{Developed an evaluation framework for agentic AI systems leveraging LLMs to assess performance and reliability.}
+            \resumeItem{Developed an evaluation framework for agentic AI systems using LLMs to assess performance.}
           \resumeItemListEnd
       \resumeProjectHeading
-          {\textbf{AI Intrusion Detection for APR1400 Nuclear Reactors} $|$ \emph{Python, PyTorch, anomaly detection}}{2022 -- Present}
+          {\textbf{AI Intrusion Detection for APR1400 Nuclear Reactors} $|$ \emph{Python, PyTorch, anomaly detection}}{Jul 2022 -- Present}
           \resumeItemListStart
-            \resumeItem{Built an AI-based defense system protecting nuclear power plant control networks from cyber attacks.}
+            \resumeItem{Developed an AI defense system to protect nuclear power plants from cyber attacks.}
           \resumeItemListEnd
       \resumeProjectHeading
-          {\textbf{Quadruped Robot with Vision SLAM} $|$ \emph{ROS, depth camera, SLAM}}{Apr 2022 -- Nov 2022}
+          {\textbf{Quadruped Robot with Vision SLAM} $|$ \emph{ROS, depth camera, SLAM}}{Apr 2022 -- Nov. 2022}
           \resumeItemListStart
-            \resumeItem{Developed autonomous navigation algorithm with SLAM and depth-camera perception for a quadruped platform.}
+            \resumeItem{Developed an autonomous quadruped robot using a navigation algorithm with SLAM and a depth camera.}
           \resumeItemListEnd
       \resumeProjectHeading
-          {\textbf{Smart Logistics with Computer Vision} $|$ \emph{PyTorch, OpenCV, container tracking}}{Apr 2021 -- Nov 2021}
+          {\textbf{Smart Logistics System Using Computer Vision} $|$ \emph{PyTorch, OpenCV, container tracking}}{Apr 2021 -- Nov. 2021}
           \resumeItemListStart
-            \resumeItem{Logistics detection system with location tracking and stack-layer identification --- Ministerial Gold Award.}
+            \resumeItem{Developed a logistics detection system incorporating location tracking and stack-layer identification for containers. --- Ministerial Gold Award.}
           \resumeItemListEnd
     \resumeSubHeadingListEnd
 
@@ -190,16 +178,15 @@
 \section{Publications \& Patents}
   \resumeSubHeadingListStart
     \item\small{
-      \textbf{D. Kwon}\textsuperscript{$\dagger$} et al. ``CascadeDebate: Multi-Agent Deliberation for Cost-Aware LLM Cascades.'' \textit{ACL 2026 --- Industry Track (Poster)}. \textsuperscript{$\dagger$}Equal contribution.
-    }
+      R.~Chang$^{\dagger}$, \textbf{D.~Kwon}$^{\dagger}$, J.~Lee$^{\dagger}$, and N.~Verma, ``CascadeDebate: Multi-Agent Deliberation for Cost-Aware LLM Cascades.'' \textit{ACL 2026 --- Industry Track (Poster)}. $^{\dagger}$Equal contribution.    }
     \item\small{
-      \textbf{D. Kwon}\textsuperscript{$\dagger$} et al. ``GEMMAS: Graph-based Evaluation Metrics for Multi-Agent Systems.'' \textit{EMNLP 2025 --- Industry Track (Oral)}. \textsuperscript{$\dagger$}Equal contribution.
-    }
+      J.~Lee$^{\dagger}$, R.~Chang$^{\dagger}$, \textbf{D.~Kwon}$^{\dagger}$, H.~Singh, and N.~Verma, ``GEMMAS: Graph-based Evaluation Metrics for Multi Agent Systems.'' \textit{EMNLP 2025 --- Industry Track (Oral)}. $^{\dagger}$Equal contribution.    }
     \item\small{
-      \textbf{D. Kwon} et al. ``Graph-Enhanced Bidirectional GRU for Anomaly Detection in Power Generation Environments.'' Under review at \textit{DMKD} (Springer Nature), 2025.
-    }
+      \textbf{D.~Kwon}, M.~Kim, Y.~Kang, J.~Lee, and C.~Park, ``Hybrid GAT + Transformer for implantable-device anomaly detection.'' \textit{IBEC 2024}. \textbf{Best Poster Award --- Silver.}    }
     \item\small{
-      \textbf{D. Kwon} et al. ``Hybrid GAT + Transformer for implantable-device anomaly detection.'' \textit{IBEC 2024}. \textbf{Best Poster Silver.}
+      \textbf{D.~Kwon}, Y.~Kang, and C.~Park, ``Enhancing medical device security with GNN-GRU anomaly detection model.'' \textit{KOSOMBE 2023}. \textbf{Outstanding Paper Award.}    }
+    \item\small{
+      \textbf{D.~Kwon}, Y.~Kang, J.~Lee, Y.~Nam, J.~Won, K.~K.~Kim, D.~D.~Kim, and C.~Park, ``Graph-Enhanced Bidirectional GRU for Anomaly Detection in Power Generation Environments.'' Under review at \textit{Data Mining and Knowledge Discovery (Springer Nature)}, 2025.
     }
     \item\small{
       Patent \textbf{KR 10-2961984} --- Real-time anomaly detection for implantable medical devices (Apr 2026).

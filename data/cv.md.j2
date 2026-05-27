@@ -1,0 +1,113 @@
+# << person.first_name >> << person.last_name >>
+
+*<< person.tagline >>*
+
+<< person.address_line1 >>, << person.address_line2 >>
+
+(<< person.phone.split(" ")[0] >>) << person.phone.split(" ", 1)[1] >> | << person.email >> | << person.homepage >> | << person.github >> | << person.linkedin >> | << person.linkedin >>
+
+---
+
+## Summary
+
+<< summary >>
+
+---
+
+## Experience
+
+<% for e in experience %>
+### << e.org >> — << e.location >>
+**<< e.role >>** *(<< e.start >> – << e.end >>)*
+<% for b in e.bullets %>
+- << b | replace("--", "–") >>
+<% endfor %>
+
+<% endfor %>
+---
+
+## Education
+
+<% for ed in education %>
+### << ed.org >> — << ed.location >>
+**<< ed.degree >>** *(<< ed.start >> – << ed.end >>)*
+- GPA: << ed.gpa >>
+
+<% endfor %>
+---
+
+## Honors & Awards
+
+### Major Awards
+<% for h in honors.major_awards %>
+- **<< h.date >>** — << h.name >>, << h.event | replace(" --- ", " — ") >> *(<< h.country >>)*
+<% endfor %>
+
+### Academic Recognition
+<% for h in honors.academic_recognition %>
+- **<< h.date >>** — << h.name >>, << h.event | replace(" --- ", " — ") >> *(<< h.country >>)*
+<% endfor %>
+
+### Competitions
+<% for h in honors.competitions %>
+- **<< h.date >>** — << h.name >>, << h.event | replace(" --- ", " — ") >> *(<< h.country >>)*
+<% endfor %>
+
+---
+
+## Projects
+
+<% for p in projects %>
+### << p.title >> — << p.location >>
+**<< p.org >>** *(<< p.start >> – << p.end >>)*
+- << p.description >>
+
+<% endfor %>
+---
+
+## Publications
+
+### Journal Articles
+<% for pub in publications.journals %>
+- << pub.authors | md >>, "<< pub.title >>," <% if pub.details == "under review" %>under review at *<< pub.venue >>*, << pub.year >>.<% else %>*<< pub.venue >>*, << pub.details | md >>.<% endif %>
+<% endfor %>
+
+### Conference Papers
+<% for pub in publications.conferences %>
+- << pub.authors | md >>, "<< pub.title >>," in *<< pub.venue | md >>*, << pub.year >>.
+<% if pub.note is defined %>  << pub.note | md >>
+<% endif %>
+<% if pub.award is defined %>  *<< pub.award.rstrip(".") | md >>*
+<% endif %>
+<% endfor %>
+
+---
+
+## Patents
+<% for pat in patents %>
+- **Issued Patent**, "<< pat.title >>", Patent No. << pat.number >>, Issued on << pat.date >>.
+<% endfor %>
+
+---
+
+## Leadership Experience
+<% for l in leadership %>
+- **<< l.role >>**, << l.org >> — << l.description >>
+<% endfor %>
+
+---
+
+## Technical Skills
+
+- **Languages:** << skills.languages | join(", ") >>
+- **Frameworks:** << skills.frameworks | join(", ") >>
+- **Tools:** << skills.tools | join(", ") >>
+- **Domains:** << skills.domains | join(", ") >>
+
+---
+
+## Languages
+
+<% for sl in spoken_languages %>
+- **<< sl.lang >>** — << sl.level >>
+<% endfor %>

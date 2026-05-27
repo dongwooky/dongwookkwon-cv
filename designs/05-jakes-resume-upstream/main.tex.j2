@@ -1,0 +1,172 @@
+%-------------------------
+% Upstream Jake Gutierrez Resume Template
+% Source: https://github.com/jakegut/resume (MIT)
+% GENERATED FROM data/cv.yaml — edit yaml + run scripts/sync.py, not this file.
+%------------------------
+
+\documentclass[letterpaper,11pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\usepackage{iftex}
+\ifPDFTeX
+  \input{glyphtounicode}
+  \pdfgentounicode=1
+\fi
+
+
+\pagestyle{fancy}
+\fancyhf{} % clear all header and footer fields
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% Adjust margins
+\addtolength{\oddsidemargin}{-0.5in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1in}
+\addtolength{\topmargin}{-.5in}
+\addtolength{\textheight}{1.0in}
+
+\urlstyle{same}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Sections formatting
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+
+%-------------------------
+% Custom commands
+\newcommand{\resumeItem}[1]{
+  \item\small{
+    {#1 \vspace{-2pt}}
+  }
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-2pt}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeProjectHeading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \small#1 & #2 \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.15in, label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+%-------------------------------------------
+\begin{document}
+
+%----------HEADING----------
+\begin{center}
+    \textbf{\Huge \scshape << person.first_name >> << person.last_name >>} \\ \vspace{1pt}
+    \small << person.phone >> $|$
+    \href{mailto:<< person.email >>}{\underline{<< person.email >>}} $|$
+    \href{<< person.homepage_url >>}{\underline{<< person.homepage >>}} $|$
+    \href{https://github.com/<< person.github >>}{\underline{github.com/<< person.github >>}} $|$
+    \href{https://linkedin.com/in/<< person.linkedin >>}{\underline{linkedin.com/in/<< person.linkedin >>}}
+\end{center}
+
+
+%-----------EDUCATION-----------
+\section{Education}
+  \resumeSubHeadingListStart
+    <% for ed in education %>
+    \resumeSubheading
+      {<< ed.org >>}{<< ed.location >>}
+      {<< ed.degree_short | replace(". ", ".\\ ") >>, GPA << ed.gpa_compact >><% if "(" in ed.gpa %> (<< ed.gpa.split("(")[1].rstrip(")") | replace("%", "\\%") >>)<% endif %>}{<< ed.start | replace(". ", ".\\ ") >> -- << ed.end | replace(". ", ".\\ ") >>}
+    <% endfor %>
+  \resumeSubHeadingListEnd
+
+
+%-----------EXPERIENCE-----------
+\section{Experience}
+  \resumeSubHeadingListStart
+
+    <% for e in experience %>
+    \resumeSubheading
+      {<< e.role >>}{<< e.start | replace(". ", ".\\ ") >> -- << e.end | replace(". ", ".\\ ") >>}
+      {<< e.org_short if e.org_short is defined else e.org >>}{<< e.location_short if e.location_short is defined else e.location >>}
+      \resumeItemListStart
+        <% for b in e.bullets %>
+        \resumeItem{<< b >>}
+        <% endfor %>
+      \resumeItemListEnd
+
+    <% endfor %>
+  \resumeSubHeadingListEnd
+
+
+%-----------PROJECTS-----------
+<# Show projects that have a tagline (= more presentable for SWE resume) #>
+\section{Projects}
+    \resumeSubHeadingListStart
+      <% for p in projects if p.tagline is defined %>
+      \resumeProjectHeading
+          {\textbf{<< p.title_short if p.title_short is defined else p.title >>} $|$ \emph{<< p.tagline >>}}{<< p.start | replace(". ", " ") | replace("Jan ", "Jan. ") | replace("Apr ", "Apr ") >> -- << p.end >>}
+          \resumeItemListStart
+            \resumeItem{<< p.description >><% if p.extra is defined %> --- << p.extra >><% endif %>}
+          \resumeItemListEnd
+      <% endfor %>
+    \resumeSubHeadingListEnd
+
+
+%-----------PUBLICATIONS \& PATENTS-----------
+\section{Publications \& Patents}
+  \resumeSubHeadingListStart
+    <% for pub in publications.conferences %>
+    \item\small{
+      << pub.authors >>, ``<< pub.title_short if pub.title_short is defined else pub.title >>.'' \textit{<< pub.venue_short >>}.<% if pub.note is defined %> << pub.note >><% endif %><% if pub.award is defined %> \textbf{<< pub.award >>}<% endif %>
+    }
+    <% endfor %>
+    <% for pub in publications.journals if pub.details == "under review" %>
+    \item\small{
+      << pub.authors >>, ``<< pub.title >>.'' Under review at \textit{<< pub.venue >>}, << pub.year >>.
+    }
+    <% endfor %>
+    <% for pat in patents %>
+    \item\small{
+      Patent \textbf{<< pat.number >>} --- << pat.title_short if pat.title_short is defined else pat.title >> (<< pat.date_short >>).
+    }
+    <% endfor %>
+  \resumeSubHeadingListEnd
+
+
+%-----------TECHNICAL SKILLS-----------
+\section{Technical Skills}
+ \begin{itemize}[leftmargin=0.15in, label={}]
+    \small{\item{
+     \textbf{Languages}{: << skills.languages | join(", ") >>} \\
+     \textbf{Frameworks}{: << skills.frameworks | join(", ") >>} \\
+     \textbf{Developer Tools}{: << skills.tools | join(", ") >>} \\
+     \textbf{Domains}{: << skills.domains | join(", ") >>}
+    }}
+ \end{itemize}
+
+
+%-------------------------------------------
+\end{document}

@@ -1,7 +1,7 @@
 %!TEX TS-program = xelatex
 % Upstream AltaCV by LianTze Lim
-% Class copied locally; pdfx/fontawesome5 swapped for tectonic compatibility.
 % Source: https://github.com/liantze/AltaCV (LPPL 1.3+)
+% GENERATED FROM data/cv.yaml — edit yaml + run scripts/sync.py, not this file.
 
 \documentclass[10pt,letterpaper,withhyper]{altacv}
 
@@ -9,8 +9,7 @@
 \usepackage{paracol}
 
 % AltaCV's native fonts. Roboto Slab comes from TeX Live's `roboto` package
-% (Bold variant requires explicit mapping below). Lato is in ~/.fonts/ via
-% fontconfig — fontspec auto-discovers all weights via family name.
+% (Bold variant requires explicit mapping below). Lato is in ~/.fonts/.
 \setmainfont{Roboto Slab}[
   UprightFont=RobotoSlab-Regular.otf,
   BoldFont=RobotoSlab-Bold.otf,
@@ -18,7 +17,7 @@
 \setsansfont{Lato}
 \renewcommand{\familydefault}{\sfdefault}
 
-% Color palette (slate + deep red — matches the design 01 sensibility)
+% Color palette
 \definecolor{SlateGrey}{HTML}{2E2E2E}
 \definecolor{LightGrey}{HTML}{666666}
 \definecolor{DarkPastelRed}{HTML}{450808}
@@ -43,7 +42,7 @@
 \begin{document}
 \name{Dongwook Kwon}
 \tagline{AI Engineer \textbullet\ Agentic AI Systems \& LLM Evaluation}
-\photoR{2.8cm}{profile}  % circular photo on right of header
+\photoR{2.8cm}{profile}
 
 \personalinfo{%
   \email{tomiyadragon@gmail.com}
@@ -64,32 +63,34 @@
 
 \cvevent{AI Engineer, Intelligent Agent Technology Team}{Suresoft Technologies}{Dec 2025 -- Present}{Seongnam, Korea}
 \begin{itemize}
-\item Developing an AI validation system utilizing agentic AI architectures for enterprise model verification.
-\item Designing autonomous and collaborative agents that verify and evaluate ML models at scale.
-\item Building agentic AI systems for systematic, scalable, reliable AI verification.
+\item Developing an AI validation system utilizing AI agent-based architectures for enterprise model verification.
+\item Designing autonomous and collaborative AI agents that verify and evaluate machine-learning models at scale.
+\item Building agentic AI systems to enable systematic, scalable, and reliable AI verification processes.
 \end{itemize}
 
 \divider
 
 \cvevent{Research Assistant}{Bio-Computing \& ML Lab, Kwangwoon University}{Aug 2021 -- Dec 2025}{Seoul, Korea}
 \begin{itemize}
-\item Deep-learning for anomaly detection in time-series (ECG, cyber-physical systems).
-\item Co-developed Active Kill-Switch and Biomarker-Based Defense for life-threatening IoT medical devices.
-\item Published in EMNLP 2025 (Oral) and ACL 2026; co-author on two granted KR patents.
+\item Researched deep-learning algorithms for anomaly detection in time-series data (ECG, cyber-physical systems).
+\item Co-developed an Active Kill-Switch and Biomarker-Based Defense System for life-threatening IoT medical devices.
+\item Published in EMNLP 2025 (Oral) and ACL 2026; co-author on two granted Republic of Korea patents.
 \end{itemize}
 
 \divider
 
-\cvevent{Visiting Researcher}{LG Electronics Canada (with University of Toronto)}{Jan 2025 -- Jul 2025}{Toronto, ON, Canada}
+\cvevent{Visiting Researcher}{LG Electronics Canada}{Jan 2025 -- Jul 2025}{Toronto, ON, Canada}
 \begin{itemize}
-\item Built an LLM-driven assessment framework for evaluating agentic AI systems.
+\item Built an LLM-driven assessment framework for evaluating performance of agentic AI systems.
+\item Work fed directly into peer-reviewed publications at EMNLP 2025 and ACL 2026.
 \end{itemize}
 
 \divider
 
-\cvevent{AI Development Project, Summer Program}{Qualcomm Institute, UC San Diego}{Jul 2022 -- Aug 2022}{San Diego, CA, USA}
+\cvevent{AI Development Project Participant, Summer Program}{Qualcomm Institute, UC San Diego}{Jul 2022 -- Aug 2022}{San Diego, CA, USA}
 \begin{itemize}
-\item Personality-based drug addiction prediction system using ML models. Achievement Award.
+\item Built a personality-based drug-addiction prediction system using machine-learning models.
+\item Recognized with the program's Achievement Award.
 \end{itemize}
 
 \cvsection{Selected Publications}
@@ -99,16 +100,20 @@
 
 \divider
 
-\cvevent{GEMMAS: Graph-based Evaluation Metrics for Multi-Agent Systems}{EMNLP 2025 --- Industry Track (Oral)}{2025}{}
+\cvevent{GEMMAS: Graph-based Evaluation Metrics for Multi Agent Systems}{EMNLP 2025 --- Industry Track (Oral)}{2025}{}
 \textbf{D.~Kwon}$^{\dagger}$ et al. $^{\dagger}$Equal contribution.
 
 \divider
 
-\cvevent{Graph-Enhanced Bidirectional GRU for Anomaly Detection in Power Generation Environments}{DMKD (Springer Nature) --- under review}{2025}{}
+\cvevent{Hybrid GAT + Transformer for implantable-device anomaly detection}{IBEC 2024 --- Best Poster Award --- Silver}{2024}{}
 
 \divider
 
-\cvevent{Hybrid GAT + Transformer for implantable-device anomaly detection}{IBEC 2024 --- Best Poster Silver}{2024}{}
+\cvevent{Enhancing medical device security with GNN-GRU anomaly detection model}{KOSOMBE 2023 --- Outstanding Paper Award}{2023}{}
+
+\divider
+
+\cvevent{Graph-Enhanced Bidirectional GRU for Anomaly Detection in Power Generation Environments}{Data Mining and Knowledge Discovery (Springer Nature) --- under review}{2025}{}
 
 \cvsection{Patents}
 
@@ -123,54 +128,52 @@
 
 \cvevent{M.S.\ Computer Engineering}{Kwangwoon University}{Mar 2024 -- Feb 2026}{Seoul, Korea}
 GPA: 4.33 / 4.5 (98.1\%)
-
 \divider
 
-\cvevent{Graduate Research Program}{University of Toronto}{Jan -- Jul 2025}{Toronto, Canada}
-Mech \& Industrial Eng. GPA: 3.68 / 4.0
-
+\cvevent{Graduate Research Program}{University of Toronto}{Jan 2025 -- Jul 2025}{Toronto, ON, Canada}
+GPA: 3.68 / 4.0
 \divider
 
-\cvevent{B.S.\ Electronics \& Communications Engineering}{Kwangwoon University}{Mar 2019 -- Feb 2024}{Seoul, Korea}
+\cvevent{B.S.\ Electronics and Communications Engineering}{Kwangwoon University}{Mar 2019 -- Feb 2024}{Seoul, Korea}
 GPA: 3.41 / 4.5 (88.1\%)
-
 \cvsection{Most Proud of}
 
-\cvachievement{\faTrophy}{Gold (Ministerial Award)}{Smart Maritime Logistics --- Minister of Oceans and Fisheries, 2021}
+\cvachievement{\faTrophy}{Achievement Award}{Qualcomm Institute AI Development Project --- UC San Diego, 2022}
 \divider
-\cvachievement{\faTrophy}{Achievement Award}{Qualcomm Institute AI Project --- UC San Diego, 2022}
+\cvachievement{\faTrophy}{Gold Award (Ministerial Award)}{2021 Smart Maritime Logistics Project --- Minister of Oceans and Fisheries, 2021}
 \divider
-\cvachievement{\faTrophy}{Outstanding Student Paper}{IEIE Conference, 2025}
+\cvachievement{\faTrophy}{Outstanding Student Paper Award}{Conference of the Institute of Electronics and Information Engineers, 2025}
 \divider
-\cvachievement{\faTrophy}{Best Poster Silver}{IBEC 2024}
+\cvachievement{\faTrophy}{Best Poster Award (Silver)}{10th International Biomedical Engineering Conference (IBEC 2024), 2024}
+\divider
+\cvachievement{\faTrophy}{Outstanding Paper Award}{Conference of the Korean Society of Medical and Biological Engineering, 2023}
 \divider
 \cvachievement{\faTrophy}{Silver Award}{23rd Embedded Software Competition (KIISE), 2025}
+\divider
+\cvachievement{\faTrophy}{Bronze Award}{Hanium ICT Mentoring Competition --- FKII, 2022}
+\divider
+\cvachievement{\faTrophy}{Excellence Award}{18th Kwangwoon ICT Exhibition (KWIX) --- Kwangwoon University, 2022}
+\divider
+\cvachievement{\faTrophy}{Grand Prize}{MY (Multi-Y) Capstone Design Competition --- Kwangwoon University, 2021}
 
 \cvsection{Skills}
 
-\cvtag{Python}\cvtag{C/C++}\cvtag{PyTorch}\\
-\cvtag{Transformers}\cvtag{LangChain}\\
-\cvtag{Linux}\cvtag{Docker}\cvtag{CUDA}
-
+\cvtag{Python}\cvtag{C/C++}\cvtag{MATLAB}\cvtag{Bash}\\
+\cvtag{PyTorch}\cvtag{TensorFlow}\cvtag{Transformers}\\
+\cvtag{Linux}\cvtag{Docker}\cvtag{Git}
 \divider\smallskip
 
-\cvtag{Agentic AI}\cvtag{Multi-Agent LLM}\\
-\cvtag{GNN}\cvtag{Time-Series Anomaly}\\
-\cvtag{Biomedical Signals}
-
+\cvtag{Agentic AI}\cvtag{multi-agent LLM systems}\cvtag{GNNs}\cvtag{time-series anomaly detection}\cvtag{biomedical signals}
 \cvsection{Languages}
 
 \cvskill{Korean}{5}
-\divider
-\cvskill{English}{4}
+\divider\cvskill{English}{4}
 
 \cvsection{Leadership}
 
-\cvevent{President}{Kwangwoon Intl. Student Association}{}{}
-\divider
-\cvevent{Director of Filming \& Editing}{Kwangwoon Broadcasting Center (KWBC)}{}{}
-\divider
-\cvevent{Class Representative}{Dept. of Electronics \& Comms Engineering}{}{}
+\cvevent{President}{Kwangwoon International Student Association}{}{}
+\divider\cvevent{Director of Filming and Editing}{Kwangwoon Broadcasting Center (KWBC)}{}{}
+\divider\cvevent{Class Representative}{Dept. of Electronics and Communications Engineering}{}{}
 
 \end{paracol}
 

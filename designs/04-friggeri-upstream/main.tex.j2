@@ -1,0 +1,123 @@
+%!TEX TS-program = xelatex
+% Upstream Friggeri CV (Nadorrano fork, MIT) based on Adrien Friggeri's original
+% Source: https://github.com/Nadorrano/cv-friggeri-x
+% GENERATED FROM data/cv.yaml — edit yaml + run scripts/sync.py, not this file.
+
+\documentclass[]{cv-friggeri-x}
+
+\usepackage{marvosym}
+
+\begin{document}
+
+\header{<< person.first_name | lower >>}{<< person.last_name | lower >>}{ai engineer \textbullet\ agentic ai systems}
+
+\begin{aside}
+\section{contact}
+\href{mailto:<< person.email >>}{<< person.email >>}
+~
+<< person.phone >>
+~
+<< person.city_country >>
+~
+\href{<< person.homepage_url >>}{<< person.homepage >>}
+\href{https://github.com/<< person.github >>}{github / << person.github >>}
+\href{https://linkedin.com/in/<< person.linkedin >>}{in / << person.linkedin >>}
+\section{languages}
+<% for sl in spoken_languages %>
+<< sl.lang | lower >> (<< sl.level.split(" ")[0] | lower >>)
+<% endfor %>
+\section{skills}
+{\color{red}$\bullet$} Python, C/C++
+{\color{red}$\bullet$} PyTorch, Transformers
+{\color{red}$\bullet$} LangChain, LLMs
+{\color{red}$\bullet$} Linux, Docker, CUDA
+{\color{red}$\bullet$} GNNs, time-series
+{\color{red}$\bullet$} biomedical signals
+\section{interests}
+<% for i in interests %>
+<< i >>
+<% endfor %>
+\end{aside}
+
+\section{education}
+
+\begin{entrylist}
+<% for ed in education %>
+\entry
+  {<< ed.start.split(" ")[-1] >><% if ed.start.split(" ")[-1] != ed.end.split(" ")[-1] %>--<< ed.end.split(" ")[-1] >><% endif %>}
+  {<< ed.degree_short | replace("M.S. in Computer Engineering", "M.S.\\ {\\normalfont in Computer Engineering}") | replace("B.S. in Electronics and Communications Engineering", "B.S.\\ {\\normalfont in Electronics and Communications Engineering}") >>}
+  {<< ed.org >><% if "Toronto" not in ed.org %>, << ed.location.split(",")[0] >><% endif %>}
+  {GPA << ed.gpa_compact >><% if "(" in ed.gpa %> (<< ed.gpa.split("(")[1].rstrip(")") | replace("%", "\\%") >>)<% endif %>.<% if ed.notes is defined %> << ed.notes >><% endif %>}
+
+<% endfor %>
+\end{entrylist}
+
+\section{experience}
+
+\begin{entrylist}
+<% for e in experience %>
+\entry
+  {<< e.start.split(" ")[-1] >><% if e.end == "Present" %>--Now<% elif e.start.split(" ")[-1] != e.end.split(" ")[-1] %>--<< e.end.split(" ")[-1] >><% endif %>}
+  {<< (e.org_short if e.org_short is defined else e.org) | upper | replace("KWANGWOON UNIVERSITY", "KWANGWOON U.") | replace("UNIVERSITY OF CALIFORNIA SAN DIEGO", "UC SAN DIEGO") >>}
+  {<< e.location_short if e.location_short is defined else e.location >>}
+  {\emph{<< e.role >>.} <% for b in (e.bullets_compact if e.bullets_compact is defined else e.bullets) %><< b >> <% endfor %>}
+
+<% endfor %>
+\end{entrylist}
+
+\section{publications}
+
+\begin{entrylist}
+<% for pub in publications.conferences %>
+\entry
+  {<< pub.year >>}
+  {<< pub.title_short if pub.title_short is defined else pub.title >>}
+  {<< pub.venue_short | replace("Industry Track", "Industry Track") >><% if pub.award is defined %> --- << pub.award.replace("Best Poster Award --- Silver.", "Best Poster Silver").rstrip(".") >><% endif %>}
+  {<< pub.authors | replace("~", " ") >>.<% if pub.note is defined %> << pub.note >><% endif %>}
+
+<% endfor %>
+<% for pub in publications.journals if pub.details == "under review" %>
+\entry
+  {<< pub.year >>}
+  {<< pub.title | replace("Power Generation Environments", "Power Generation") >>}
+  {Data Mining \& Knowledge Discovery (under review)}
+  {<< pub.authors | replace("~", " ") | replace("\\textbf{D. Kwon}, Y. Kang, J. Lee, Y. Nam, J. Won, K. K. Kim, D. D. Kim, and C. Park", "\\textbf{D. Kwon} et al") >>.}
+
+<% endfor %>
+\end{entrylist}
+
+\section{awards}
+
+\begin{entrylist}
+<% for h in honors.major_awards %>
+\entry
+  {<< h.date.split(" ")[-1] >>}
+  {<< h.name | replace("Gold Award (Ministerial Award)", "Gold Award (Ministerial)") >>}
+  {<< h.event >>}
+  {<% if "Qualcomm" in h.event %>Honored for project work during the summer program.<% elif "Smart Maritime" in h.event %>Top award for project on container detection and stack-layer identification.<% else %>Recognized for outstanding work.<% endif %>}
+
+<% endfor %>
+<% for h in honors.competitions[:1] %>
+\entry
+  {<< h.date.split(" ")[-1] >>}
+  {<< h.name >>}
+  {<< h.event >>}
+  {Recognition at one of Korea's flagship embedded-software competitions.}
+
+<% endfor %>
+\end{entrylist}
+
+\section{patents}
+
+\begin{entrylist}
+<% for pat in patents %>
+\entry
+  {<< pat.date.split(", ")[-1] >>}
+  {<< pat.title >>}
+  {<< pat.number >>}
+  {Issued patent, Republic of Korea. << pat.date >>.}
+
+<% endfor %>
+\end{entrylist}
+
+\end{document}

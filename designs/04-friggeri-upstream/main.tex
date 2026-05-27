@@ -1,20 +1,16 @@
 %!TEX TS-program = xelatex
 % Upstream Friggeri CV (Nadorrano fork, MIT) based on Adrien Friggeri's original
 % Source: https://github.com/Nadorrano/cv-friggeri-x
-% Class file copied locally; Roboto family swapped for Inter.
+% GENERATED FROM data/cv.yaml — edit yaml + run scripts/sync.py, not this file.
 
 \documentclass[]{cv-friggeri-x}
-% Options: a4paper, nocolors, lightheader
 
-\usepackage{marvosym} % \Telefon, \Letter, \Mobilefone
+\usepackage{marvosym}
 
 \begin{document}
 
 \header{dongwook}{kwon}{ai engineer \textbullet\ agentic ai systems}
 
-%----------------------------------------------------------------------------------------
-%	SIDEBAR
-%----------------------------------------------------------------------------------------
 \begin{aside}
 \section{contact}
 \href{mailto:tomiyadragon@gmail.com}{tomiyadragon@gmail.com}
@@ -43,9 +39,6 @@ nuclear cybersecurity
 amateur radio
 \end{aside}
 
-%----------------------------------------------------------------------------------------
-%	EDUCATION
-%----------------------------------------------------------------------------------------
 \section{education}
 
 \begin{entrylist}
@@ -59,18 +52,16 @@ amateur radio
   {2025}
   {Graduate Research Program}
   {University of Toronto}
-  {Mechanical and Industrial Engineering. GPA 3.68 / 4.0.}
+  {GPA 3.68 / 4.0. Mechanical and Industrial Engineering.}
 
 \entry
   {2019--2024}
   {B.S.\ {\normalfont in Electronics and Communications Engineering}}
   {Kwangwoon University, Seoul}
   {GPA 3.41 / 4.5 (88.1\%).}
+
 \end{entrylist}
 
-%----------------------------------------------------------------------------------------
-%	EXPERIENCE
-%----------------------------------------------------------------------------------------
 \section{experience}
 
 \begin{entrylist}
@@ -78,30 +69,28 @@ amateur radio
   {2025--Now}
   {SURESOFT TECHNOLOGIES}
   {Seongnam, Korea}
-  {\emph{AI Engineer, Intelligent Agent Technology Team.} Developing an AI validation system using agentic AI architectures. Designing autonomous and collaborative agents for systematic, scalable AI verification.}
+  {\emph{AI Engineer, Intelligent Agent Technology Team.} Developing AI validation system using agentic AI architectures for enterprise model verification. Designing autonomous and collaborative agents for systematic AI verification. }
 
 \entry
   {2021--2025}
   {BIO-COMPUTING \& ML LAB, KWANGWOON U.}
   {Seoul, Korea}
-  {\emph{Research Assistant.} Deep-learning for anomaly detection in time-series data (ECG, cyber-physical systems). Co-developed an Active Kill-Switch and Biomarker-Based Defense System for IoT medical devices.}
+  {\emph{Research Assistant.} Deep-learning anomaly detection in time-series (ECG, cyber-physical systems). EMNLP 2025 (Oral), ACL 2026; two granted KR patents. }
 
 \entry
   {2025}
   {LG ELECTRONICS CANADA}
   {Toronto, ON, Canada}
-  {\emph{Visiting Researcher} (with the University of Toronto). Built an LLM-driven assessment framework for evaluating performance of agentic AI systems.}
+  {\emph{Visiting Researcher.} Built LLM-driven assessment framework for evaluating agentic AI systems. }
 
 \entry
   {2022}
   {QUALCOMM INSTITUTE, UC SAN DIEGO}
-  {San Diego, CA}
-  {\emph{AI Development Project, Summer Program.} Personality-based drug-addiction prediction system. Received the program's Achievement Award.}
+  {San Diego, CA, USA}
+  {\emph{AI Development Project Participant, Summer Program.} Personality-based drug-addiction prediction. Achievement Award. }
+
 \end{entrylist}
 
-%----------------------------------------------------------------------------------------
-%	PUBLICATIONS
-%----------------------------------------------------------------------------------------
 \section{publications}
 
 \begin{entrylist}
@@ -109,13 +98,25 @@ amateur radio
   {2026}
   {CascadeDebate: Multi-Agent Deliberation for Cost-Aware LLM Cascades}
   {ACL 2026 --- Industry Track (Poster)}
-  {R. Chang$^{\dagger}$, \textbf{D. Kwon}$^{\dagger}$, J. Lee$^{\dagger}$, N. Verma. $^{\dagger}$Equal contribution.}
+  {R. Chang$^{\dagger}$, \textbf{D. Kwon}$^{\dagger}$, J. Lee$^{\dagger}$, and N. Verma. $^{\dagger}$Equal contribution.}
 
 \entry
   {2025}
-  {GEMMAS: Graph-based Evaluation Metrics for Multi-Agent Systems}
+  {GEMMAS: Graph-based Evaluation Metrics for Multi Agent Systems}
   {EMNLP 2025 --- Industry Track (Oral)}
-  {J. Lee$^{\dagger}$, R. Chang$^{\dagger}$, \textbf{D. Kwon}$^{\dagger}$, H. Singh, N. Verma. $^{\dagger}$Equal contribution.}
+  {J. Lee$^{\dagger}$, R. Chang$^{\dagger}$, \textbf{D. Kwon}$^{\dagger}$, H. Singh, and N. Verma. $^{\dagger}$Equal contribution.}
+
+\entry
+  {2024}
+  {Hybrid GAT + Transformer for implantable-device anomaly detection}
+  {IBEC 2024 --- Best Poster Silver}
+  {\textbf{D. Kwon}, M. Kim, Y. Kang, J. Lee, and C. Park.}
+
+\entry
+  {2023}
+  {Enhancing medical device security with GNN-GRU anomaly detection model}
+  {KOSOMBE 2023 --- Outstanding Paper Award}
+  {\textbf{D. Kwon}, Y. Kang, and C. Park.}
 
 \entry
   {2025}
@@ -123,29 +124,21 @@ amateur radio
   {Data Mining \& Knowledge Discovery (under review)}
   {\textbf{D. Kwon} et al.}
 
-\entry
-  {2024}
-  {Hybrid GAT + Transformer for implantable-device anomaly detection}
-  {IBEC 2024 --- Best Poster Silver}
-  {\textbf{D. Kwon} et al.}
 \end{entrylist}
 
-%----------------------------------------------------------------------------------------
-%	AWARDS
-%----------------------------------------------------------------------------------------
 \section{awards}
 
 \begin{entrylist}
 \entry
   {2022}
   {Achievement Award}
-  {Qualcomm Institute AI Project --- UC San Diego}
+  {Qualcomm Institute AI Development Project --- UC San Diego}
   {Honored for project work during the summer program.}
 
 \entry
   {2021}
   {Gold Award (Ministerial)}
-  {Smart Maritime Logistics Project --- Minister of Oceans and Fisheries}
+  {2021 Smart Maritime Logistics Project --- Minister of Oceans and Fisheries}
   {Top award for project on container detection and stack-layer identification.}
 
 \entry
@@ -153,11 +146,9 @@ amateur radio
   {Silver Award}
   {23rd Embedded Software Competition (KIISE)}
   {Recognition at one of Korea's flagship embedded-software competitions.}
+
 \end{entrylist}
 
-%----------------------------------------------------------------------------------------
-%	PATENTS
-%----------------------------------------------------------------------------------------
 \section{patents}
 
 \begin{entrylist}
@@ -172,6 +163,7 @@ amateur radio
   {GPT API-Based Network Anomaly Detection}
   {KR 10-2848814}
   {Issued patent, Republic of Korea. August 18, 2025.}
+
 \end{entrylist}
 
 \end{document}
