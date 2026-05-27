@@ -113,19 +113,18 @@
 \cvsubsection{Conference Papers}
 \begin{cvparagraph}
 <% for pub in publications.conferences %>
-<< pub.authors >>, ``<< pub.title >>,'' in \emph{<< pub.venue >> --- << pub.venue_short.split(" --- ")[1] if " --- " in pub.venue_short else "" >>}, << pub.year >>.<% if pub.note is defined %> << pub.note >><% endif %><% if pub.award is defined %> \textbf{<< pub.award >>}<% endif %>
+<< pub.authors >>, ``<< pub.title >>,'' in \emph{<< pub.venue >>}<% if pub.details is defined %>, << pub.details >><% endif %>, << pub.year >>.<% if pub.note is defined %> << pub.note >><% endif %><% if pub.award is defined %> \textbf{<< pub.award >>}<% endif %>
 
 <% endfor %>
 \end{cvparagraph}
 
 %-------------------------------------------------------------------------------
 \cvsection{Patents}
-\begin{cvparagraph}
-<% for pat in patents %>
-\textbf{Issued Patent}, ``<< pat.title >>,'' Patent No. << pat.number >>, Issued on << pat.date >>.
-
-<% endfor %>
-\end{cvparagraph}
+\begin{cvhonors}
+  <% for pat in patents %>
+  \cvhonor{<< pat.title >>}{<< pat.number >>}{Republic of Korea}{<< pat.date_short >>}
+  <% endfor %>
+\end{cvhonors}
 
 %-------------------------------------------------------------------------------
 \cvsection{Leadership Experience}
