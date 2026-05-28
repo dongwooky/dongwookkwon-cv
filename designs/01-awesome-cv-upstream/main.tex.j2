@@ -104,7 +104,7 @@
 
 \cvsubsection{Journal Articles}
 {\footnotesize
-\begin{itemize}[leftmargin=*]
+\begin{itemize}[leftmargin=*, topsep=2pt, itemsep=2pt]
 <% for pub in publications.journals %>
   \item << pub.authors >>, ``<< pub.title >>,'' <% if pub.details == "under review" %>under review at \emph{<< pub.venue >>}, << pub.year >><% else %>\emph{<< pub.venue >>}, << pub.details >><% endif %>.
 <% endfor %>
@@ -113,7 +113,7 @@
 
 \cvsubsection{Conference Papers}
 {\footnotesize
-\begin{itemize}[leftmargin=*]
+\begin{itemize}[leftmargin=*, topsep=2pt, itemsep=2pt]
 <% for pub in publications.conferences %>
   \item << pub.authors >>, ``<< pub.title >>,'' in \emph{<< pub.venue >>}<% if pub.details is defined %>, << pub.details >><% endif %>, << pub.year >>.<% if pub.note is defined %>\\<< pub.note >><% endif %><% if pub.award is defined %> \textbf{\emph{<< pub.award >>}}<% endif %>
 <% endfor %>
