@@ -103,20 +103,22 @@
 \cvsection{Publications}
 
 \cvsubsection{Journal Articles}
-\begin{cvparagraph}
+{\footnotesize
+\begin{itemize}[leftmargin=*]
 <% for pub in publications.journals %>
-<< pub.authors >>, ``<< pub.title >>,'' <% if pub.details == "under review" %>under review at \emph{<< pub.venue >>}, << pub.year >><% else %>\emph{<< pub.venue >>}, << pub.details >><% endif %>.
-
+  \item << pub.authors >>, ``<< pub.title >>,'' <% if pub.details == "under review" %>under review at \emph{<< pub.venue >>}, << pub.year >><% else %>\emph{<< pub.venue >>}, << pub.details >><% endif %>.
 <% endfor %>
-\end{cvparagraph}
+\end{itemize}
+}
 
 \cvsubsection{Conference Papers}
-\begin{cvparagraph}
+{\footnotesize
+\begin{itemize}[leftmargin=*]
 <% for pub in publications.conferences %>
-<< pub.authors >>, ``<< pub.title >>,'' in \emph{<< pub.venue >>}<% if pub.details is defined %>, << pub.details >><% endif %>, << pub.year >>.<% if pub.note is defined %> << pub.note >><% endif %><% if pub.award is defined %> \textbf{<< pub.award >>}<% endif %>
-
+  \item << pub.authors >>, ``<< pub.title >>,'' in \emph{<< pub.venue >>}<% if pub.details is defined %>, << pub.details >><% endif %>, << pub.year >>.<% if pub.note is defined %>\\<< pub.note >><% endif %><% if pub.award is defined %> \textbf{\emph{<< pub.award >>}}<% endif %>
 <% endfor %>
-\end{cvparagraph}
+\end{itemize}
+}
 
 %-------------------------------------------------------------------------------
 \cvsection{Patents}
