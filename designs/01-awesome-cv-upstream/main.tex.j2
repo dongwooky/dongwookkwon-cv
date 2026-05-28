@@ -128,11 +128,19 @@
 
 %-------------------------------------------------------------------------------
 \cvsection{Leadership Experience}
-\begin{cvparagraph}
-<% for l in leadership %>
-\textbf{<< l.role >>}, << l.org >> --- << l.description >>
-
-<% endfor %>
-\end{cvparagraph}
+\begin{cventries}
+  <% for l in leadership %>
+  \cventry
+    {<< l.role >>}
+    {<< l.org >>}
+    {}
+    {}
+    {
+      \begin{cvitems}
+        \item {<< l.description >>}
+      \end{cvitems}
+    }
+  <% endfor %>
+\end{cventries}
 
 \end{document}
