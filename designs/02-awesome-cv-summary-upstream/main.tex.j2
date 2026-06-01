@@ -1,0 +1,157 @@
+%!TEX TS-program = xelatex
+%!TEX encoding = UTF-8 Unicode
+% Upstream Awesome-CV (posquit0) WITH a Summary section above Experience.
+% Identical to designs/01-awesome-cv-upstream except for the cvsection{Summary}
+% block right after \makecvfooter. If you change the layout of one, mirror it
+% in the other to keep them in sync.
+% Source: https://github.com/posquit0/Awesome-CV (CC BY-SA 4.0)
+% GENERATED FROM data/cv.yaml — edit yaml + run scripts/sync.py, not this file.
+
+\documentclass[11pt, letterpaper]{awesome-cv}
+
+\geometry{left=1.4cm, top=.8cm, right=1.4cm, bottom=1.8cm, footskip=.5cm}
+
+\colorlet{awesome}{awesome-red}
+\setbool{acvSectionColorHighlight}{true}
+\renewcommand{\acvHeaderSocialSep}{\quad\textbar\quad}
+
+\name{<< person.first_name >>}{<< person.last_name >>}
+\position{<< person.position | replace("▪", "{\\enskip\\cdotp\\enskip}") >>}
+\address{<< person.address_line1 >>, << person.address_line2 >>}
+\mobile{(<< person.phone.split(" ")[0] >>) << person.phone.split(" ", 1)[1] >>}
+\email{<< person.email >>}
+\homepage{<< person.homepage >>}
+\github{<< person.github >>}
+\linkedin{<< person.linkedin >>}
+
+\begin{document}
+
+\makecvheader[C]
+\makecvfooter
+  {\today}
+  {<< person.first_name >> << person.last_name >>~~~·~~~Curriculum Vitae}
+  {\thepage}
+
+%-------------------------------------------------------------------------------
+\cvsection{Summary}
+\begin{cvparagraph}
+<< summary >>
+\end{cvparagraph}
+
+%-------------------------------------------------------------------------------
+\cvsection{Experience}
+\begin{cventries}
+  <% for e in experience %>
+  \cventry
+    {<< e.role >>}
+    {<< e.org >>}
+    {<< e.location >>}
+    {<< e.start | replace(". ", ".\\ ") >> - << e.end | replace(". ", ".\\ ") >>}
+    {
+      \begin{cvitems}
+        <% for b in e.bullets %>
+        \item {<< b | replace("--", "-") >>}
+        <% endfor %>
+      \end{cvitems}
+    }
+  <% endfor %>
+\end{cventries}
+
+%-------------------------------------------------------------------------------
+\cvsection{Education}
+\begin{cventries}
+  <% for ed in education %>
+  \cventry
+    {<< ed.degree >>}
+    {<< ed.org >>}
+    {<< ed.location >>}
+    {<< ed.start | replace(". ", ".\\ ") >> - << ed.end | replace(". ", ".\\ ") >>}
+    {
+      \begin{cvitems}
+        \item {GPA: << ed.gpa | replace("%", "\\%") >>}
+      \end{cvitems}
+    }
+  <% endfor %>
+\end{cventries}
+
+%-------------------------------------------------------------------------------
+\cvsection{Honors \& Awards}
+
+\cvsubsection{Major Awards}
+\begin{cvhonors}
+  <% for h in honors.major_awards %>
+  \cvhonor{<< h.name >>}{<< h.event >>}{<< h.country >>}{<< h.date | replace(". ", ".\\ ") >>}
+  <% endfor %>
+\end{cvhonors}
+
+\cvsubsection{Academic Recognition}
+\begin{cvhonors}
+  <% for h in honors.academic_recognition %>
+  \cvhonor{<< h.name >>}{<< h.event >>}{<< h.country >>}{<< h.date | replace(". ", ".\\ ") >>}
+  <% endfor %>
+\end{cvhonors}
+
+\cvsubsection{Competitions}
+\begin{cvhonors}
+  <% for h in honors.competitions %>
+  \cvhonor{<< h.name >>}{<< h.event >>}{<< h.country >>}{<< h.date | replace(". ", ".\\ ") >>}
+  <% endfor %>
+\end{cvhonors}
+
+%-------------------------------------------------------------------------------
+\cvsection{Funded Research Projects}
+\begin{cventries}
+  <% for p in projects %>
+  \cventry{<< p.title >>}{<< p.org >>}{<< p.location >>}{<< p.start | replace(". ", ".\\ ") >> - << p.end | replace(". ", ".\\ ") >>}
+  {\begin{cvitems}\item {<< p.description >>}\end{cvitems}}
+
+  <% endfor %>
+\end{cventries}
+
+%-------------------------------------------------------------------------------
+\cvsection{Publications}
+
+\cvsubsection{Journal Articles}
+{\footnotesize
+\begin{itemize}[leftmargin=*, topsep=2pt, itemsep=2pt]
+<% for pub in publications.journals %>
+  \item << pub.authors >>, ``<< pub.title >>,'' <% if pub.details == "under review" %>under review at \emph{<< pub.venue >>}, << pub.year >><% else %>\emph{<< pub.venue >>}, << pub.details >><% endif %>.
+<% endfor %>
+\end{itemize}
+}
+
+\cvsubsection{Conference Papers}
+{\footnotesize
+\begin{itemize}[leftmargin=*, topsep=2pt, itemsep=2pt]
+<% for pub in publications.conferences %>
+  \item << pub.authors >>, ``<< pub.title >>,'' in \emph{<< pub.venue >>}<% if pub.details is defined %>, << pub.details >><% endif %>, << pub.year >>.<% if pub.note is defined %>\\<< pub.note >><% endif %><% if pub.award is defined %> \textbf{\emph{<< pub.award >>}}<% endif %>
+<% endfor %>
+\end{itemize}
+}
+
+%-------------------------------------------------------------------------------
+\cvsection{Patents}
+\begin{cvhonors}
+  <% for pat in patents %>
+  \cvhonor{<< pat.title >>}{<< pat.number >>}{Republic of Korea}{<< pat.date_short >>}
+  <% endfor %>
+\end{cvhonors}
+
+%-------------------------------------------------------------------------------
+\cvsection{Leadership Experience}
+\begin{cventries}
+  <% for l in leadership %>
+  \cventry
+    {<< l.role >>}
+    {<< l.org >>}
+    {}
+    {}
+    {
+      \begin{cvitems}
+        \item {<< l.description >>}
+      \end{cvitems}
+    }
+  <% endfor %>
+\end{cventries}
+
+\end{document}
