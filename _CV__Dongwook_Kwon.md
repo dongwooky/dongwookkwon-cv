@@ -10,7 +10,7 @@
 
 ## Summary
 
-AI engineer focused on agentic AI systems and LLM-based multi-agent evaluation. Research background in deep-learning anomaly detection for time-series data (ECG, cyber-physical systems). Published at EMNLP 2025 (Oral) and ACL 2026; co-author on two granted Republic of Korea patents.
+Highly accomplished AI Research Engineer specializing in Large Language Model (LLM) optimization and Multi-Agent Systems (MAS), with a proven track record of bridging advanced academic research and high-impact industrial applications. Demonstrated research excellence through publications in top-tier natural language processing venues, including an Oral presentation at EMNLP 2025 and a peer-reviewed paper at ACL 2026 focusing on cost-aware LLM cascades. Inventor of multiple registered patents in AI-driven anomaly detection and a key technical lead who has successfully delivered mission-critical autonomous agent systems for global enterprise leaders, including Hyundai Motor Company and LG Electronics. Poised to significantly advance the United States' technological edge in critical and emerging fields by engineering scalable, reliable, and secure autonomous AI architectures.
 
 ---
 
