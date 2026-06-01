@@ -4,7 +4,7 @@
 
 11F, 37, Geumto-ro 80beon-gil, Sujeong-gu, Seongnam-si, Gyeonggi-do, 13453, South Korea
 
-(+82) 10-6612-9246 | tomiyadragon@gmail.com | dongwooky.github.io | dongwooky | dongwooky | dongwooky
+(+82) 10-6612-9246 | dwkwon@suresofttech.com | dongwooky.github.io | dongwooky | dongwooky | dongwooky
 
 ---
 
@@ -16,7 +16,7 @@ AI engineer focused on agentic AI systems and LLM-based multi-agent evaluation. 
 
 ## Experience
 
-### Suresoft Technologies — Seongnam, Gyeonggi, Korea
+### Suresoft Technologies — Seongnam-si, Korea
 **AI Engineer, Intelligent Agent Technology Team** *(Dec. 2025 – Present)*
 - Developing an AI validation system utilizing AI agent–based architectures for enterprise model verification.
 - Designing autonomous and collaborative AI agents that verify and evaluate machine-learning models at scale.

@@ -118,6 +118,7 @@ GPA: << ed.gpa_compact >><% if "(" in ed.gpa %> (<< ed.gpa.split("(")[1].rstrip(
 
 <% endif %>
 <% endfor %>
+\par
 
 \cvsection{Most Proud of}
 
@@ -136,7 +137,7 @@ GPA: << ed.gpa_compact >><% if "(" in ed.gpa %> (<< ed.gpa.split("(")[1].rstrip(
 
 \divider\smallskip
 
-<% for d in skills.domains %>\cvtag{<< d >>}<% endfor %>
+<% for d in skills.domains %>\cvtag{<< d >>}<% endfor %>\par
 
 \cvsection{Languages}
 

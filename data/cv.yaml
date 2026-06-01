@@ -169,13 +169,13 @@ projects:
     tagline: "Python, LLMs, multi-agent systems"
 
   - title: AI-based Intrusion Detection and Attack Packet Crafting Technologies for APR1400
-    title_short: AI Intrusion Detection for APR1400 Nuclear Reactors
+    title_short: AI Intrusion Detection for APR1400
     org: Sejong University
     location: Seoul, Korea
     start: Jul. 2022
     end: Present
     description: Developed an AI defense system to protect nuclear power plants from cyber attacks.
-    tagline: "Python, PyTorch, anomaly detection"
+    tagline: "PyTorch, anomaly detection"
 
   - title: Quadruped Robot Using Vision SLAM with a Depth Camera
     title_short: Quadruped Robot with Vision SLAM
@@ -209,7 +209,7 @@ projects:
     start: Apr. 2021
     end: Nov. 2021
     description: Developed a logistics detection system incorporating location tracking and stack-layer identification for containers.
-    tagline: "PyTorch, OpenCV, container tracking"
+    tagline: "OpenCV, container tracking"
     extra: Ministerial Gold Award.
 
   - title: Smart Kitchen IoT System Utilizing Computer Vision and Deep Learning
@@ -309,15 +309,17 @@ skills:
     - biomedical signals
 
 # Skill bars for visual designs (07 TwentySecondsCV uses these).
-# level is 0-6 scale.
+# IMPORTANT: TwentySecondsCV's max level is 5 (not 6) — anything above
+# overflows the sidebar. Slashes in names break the cls parser (it splits
+# label/level on `/`), so avoid them (e.g. "C \& C++" instead of "C/C++").
 skill_bars:
-  - {name: Python, level: 6}
-  - {name: PyTorch \& Transformers, level: 5.5}
-  - {name: C/C++, level: 4.5}
-  - {name: LangChain \& LLMs, level: 5}
-  - {name: Linux \& Docker, level: 5}
-  - {name: CUDA, level: 4}
-  - {name: MATLAB, level: 4}
+  - {name: Python, level: 5}
+  - {name: PyTorch \& Transformers, level: 4.5}
+  - {name: C \& C++, level: 4}
+  - {name: LangChain \& LLMs, level: 4.5}
+  - {name: Linux \& Docker, level: 4.5}
+  - {name: CUDA, level: 3.5}
+  - {name: MATLAB, level: 3.5}
 
 skill_tags:
   - {name: Agentic AI, level: 5.5}

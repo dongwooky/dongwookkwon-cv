@@ -75,6 +75,7 @@ Agentic AI \textbullet{} Multi-Agent LLM \textbullet{} GNN \textbullet{} Anomaly
 \runsubsection{<< e.org_short if e.org_short is defined else e.org >>}
 \descript{$|$ << e.role | replace("AI Engineer, Intelligent Agent Technology Team", "AI Engineer, Intelligent Agent Team") | replace("AI Development Project Participant, Summer Program", "AI Development (Summer)") >>}
 \location{<< e.start | replace(". ", " ") >> -- << e.end | replace(". ", " ") >> $|$ << e.location_short if e.location_short is defined else e.location >>}
+\vspace{0.4em}
 \begin{tightemize}
 <% for b in (e.bullets_compact if e.bullets_compact is defined else e.bullets) %>
 \item << b >>
