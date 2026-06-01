@@ -123,13 +123,6 @@
   <% endfor %>
 \end{cvhonors}
 
-\cvsubsection{Competitions}
-\begin{cvhonors}
-  <% for h in honors.competitions %>
-  \cvhonor{<< h.name >>}{<< h.event >>}{<< h.country >>}{<< h.date | replace(". ", ".\\ ") >>}
-  <% endfor %>
-\end{cvhonors}
-
 %-------------------------------------------------------------------------------
 \cvsection{Funded Research Projects}
 \begin{cventries}
