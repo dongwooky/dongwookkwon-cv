@@ -2,6 +2,9 @@
 % Upstream Jake Gutierrez Resume Template
 % Source: https://github.com/jakegut/resume (MIT)
 % GENERATED FROM data/cv.yaml — edit yaml + run scripts/sync.py, not this file.
+% Section composition mirrors 02-awesome-cv-summary:
+%   Summary -> Patents -> Publications -> Research & Professional Experience
+%   -> Education -> Honors & Awards   (no Projects / Skills section)
 %------------------------
 
 \documentclass[letterpaper,11pt]{article}
@@ -71,6 +74,9 @@
     \end{tabular*}\vspace{-7pt}
 }
 
+% Small-caps sub-label inside a no-bullet list (mirrors awesome-cv \cvsubsection)
+\newcommand{\resumeSubLabel}[1]{\item {\scshape\small #1}\vspace{-3pt}}
+
 \renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
 
 \newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.15in, label={}]}
@@ -92,6 +98,52 @@
 \end{center}
 
 
+%-----------SUMMARY-----------
+\section{Summary}
+{\small << summary >>}
+\vspace{2pt}
+
+
+%-----------PATENTS-----------
+\section{Patents}
+  \resumeSubHeadingListStart
+    <% for pat in patents %>
+    \item\small{\makebox[1.6cm][l]{<< pat.date_short >>}\textbf{<< pat.title >>}, << pat.number >>}
+    <% endfor %>
+  \resumeSubHeadingListEnd
+
+
+%-----------PUBLICATIONS-----------
+\section{Publications}
+  \resumeSubHeadingListStart
+    \resumeSubLabel{Journal Articles}
+    <% for pub in publications.journals %>
+    \item\small{<< pub.authors >>, ``<< pub.title >>,'' <% if pub.details == "under review" %>under review at \textit{<< pub.venue >>}, << pub.year >><% else %>\textit{<< pub.venue >>}, << pub.details >><% endif %>.}
+    <% endfor %>
+    \vspace{2pt}
+    \resumeSubLabel{Conference Papers}
+    <% for pub in publications.conferences %>
+    \item\small{<< pub.authors >>, ``<< pub.title >>,'' in \textit{<< pub.venue >>}<% if pub.details is defined %>, << pub.details >><% endif %>, << pub.year >>.<% if pub.note is defined %> << pub.note >><% endif %><% if pub.award is defined %> \textbf{<< pub.award >>}<% endif %>}
+    <% endfor %>
+  \resumeSubHeadingListEnd
+
+
+%-----------RESEARCH & PROFESSIONAL EXPERIENCE-----------
+\section{Research \& Professional Experience}
+  \resumeSubHeadingListStart
+    <% for e in experience %>
+    \resumeSubheading
+      {<< e.role >>}{<< e.start | replace(". ", ".\\ ") >> -- << e.end | replace(". ", ".\\ ") >>}
+      {<< e.org_short if e.org_short is defined else e.org >>}{<< e.location_short if e.location_short is defined else e.location >>}
+      \resumeItemListStart
+        <% for b in e.bullets %>
+        \resumeItem{<< b >>}
+        <% endfor %>
+      \resumeItemListEnd
+    <% endfor %>
+  \resumeSubHeadingListEnd
+
+
 %-----------EDUCATION-----------
 \section{Education}
   \resumeSubHeadingListStart
@@ -103,69 +155,19 @@
   \resumeSubHeadingListEnd
 
 
-%-----------EXPERIENCE-----------
-\section{Experience}
+%-----------HONORS & AWARDS-----------
+\section{Honors \& Awards}
   \resumeSubHeadingListStart
-
-    <% for e in experience %>
-    \resumeSubheading
-      {<< e.role >>}{<< e.start | replace(". ", ".\\ ") >> -- << e.end | replace(". ", ".\\ ") >>}
-      {<< e.org_short if e.org_short is defined else e.org >>}{<< e.location_short if e.location_short is defined else e.location >>}
-      \resumeItemListStart
-        <% for b in e.bullets %>
-        \resumeItem{<< b >>}
-        <% endfor %>
-      \resumeItemListEnd
-
+    \resumeSubLabel{Major Awards}
+    <% for h in honors.major_awards %>
+    \item\small{\makebox[1.6cm][l]{<< h.date | replace(". ", ".\\ ") >>}\textbf{<< h.name >>}, << h.event >>}
+    <% endfor %>
+    \vspace{2pt}
+    \resumeSubLabel{Academic Recognition}
+    <% for h in honors.academic_recognition %>
+    \item\small{\makebox[1.6cm][l]{<< h.date | replace(". ", ".\\ ") >>}\textbf{<< h.name >>}, << h.event >>}
     <% endfor %>
   \resumeSubHeadingListEnd
-
-
-%-----------PROJECTS-----------
-<# Show projects that have a tagline (= more presentable for SWE resume) #>
-\section{Projects}
-    \resumeSubHeadingListStart
-      <% for p in projects if p.tagline is defined %>
-      \resumeProjectHeading
-          {\textbf{<< p.title_short if p.title_short is defined else p.title >>} $|$ \emph{<< p.tagline >>}}{<< p.start | replace(". ", " ") | replace("Jan ", "Jan. ") | replace("Apr ", "Apr ") >> -- << p.end >>}
-          \resumeItemListStart
-            \resumeItem{<< p.description >><% if p.extra is defined %> --- << p.extra >><% endif %>}
-          \resumeItemListEnd
-      <% endfor %>
-    \resumeSubHeadingListEnd
-
-
-%-----------PUBLICATIONS \& PATENTS-----------
-\section{Publications \& Patents}
-  \resumeSubHeadingListStart
-    <% for pub in publications.conferences %>
-    \item\small{
-      << pub.authors >>, ``<< pub.title_short if pub.title_short is defined else pub.title >>.'' \textit{<< pub.venue_short >>}.<% if pub.note is defined %> << pub.note >><% endif %><% if pub.award is defined %> \textbf{<< pub.award >>}<% endif %>
-    }
-    <% endfor %>
-    <% for pub in publications.journals if pub.details == "under review" %>
-    \item\small{
-      << pub.authors >>, ``<< pub.title >>.'' Under review at \textit{<< pub.venue >>}, << pub.year >>.
-    }
-    <% endfor %>
-    <% for pat in patents %>
-    \item\small{
-      Patent \textbf{<< pat.number >>} --- << pat.title_short if pat.title_short is defined else pat.title >> (<< pat.date_short >>).
-    }
-    <% endfor %>
-  \resumeSubHeadingListEnd
-
-
-%-----------TECHNICAL SKILLS-----------
-\section{Technical Skills}
- \begin{itemize}[leftmargin=0.15in, label={}]
-    \small{\item{
-     \textbf{Languages}{: << skills.languages | join(", ") >>} \\
-     \textbf{Frameworks}{: << skills.frameworks | join(", ") >>} \\
-     \textbf{Developer Tools}{: << skills.tools | join(", ") >>} \\
-     \textbf{Domains}{: << skills.domains | join(", ") >>}
-    }}
- \end{itemize}
 
 
 %-------------------------------------------
