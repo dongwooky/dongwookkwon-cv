@@ -25,6 +25,7 @@
 \linkedin{<< person.linkedin >>}
 
 \begin{document}
+\raggedbottom
 
 \makecvheader[C]
 \makecvfooter
@@ -71,7 +72,7 @@
 }
 
 %-------------------------------------------------------------------------------
-\cvsection{Experience}
+\cvsection{Research \& Professional Experience}
 \begin{cventries}
   <% for e in experience %>
   \cventry
@@ -122,15 +123,5 @@
   \cvhonor{<< h.name >>}{<< h.event >>}{<< h.country >>}{<< h.date | replace(". ", ".\\ ") >>}
   <% endfor %>
 \end{cvhonors}
-
-%-------------------------------------------------------------------------------
-\cvsection{Funded Research Projects}
-\begin{cventries}
-  <% for p in projects %>
-  \cventry{<< p.title >>}{<< p.org >>}{<< p.location >>}{<< p.start | replace(". ", ".\\ ") >> - << p.end | replace(". ", ".\\ ") >>}
-  {\begin{cvitems}\item {<< p.description >>}\end{cvitems}}
-
-  <% endfor %>
-\end{cventries}
 
 \end{document}
