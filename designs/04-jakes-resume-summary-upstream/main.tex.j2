@@ -1,0 +1,174 @@
+%-------------------------
+% Upstream Jake Gutierrez Resume Template
+% Source: https://github.com/jakegut/resume (MIT)
+% GENERATED FROM data/cv.yaml — edit yaml + run scripts/sync.py, not this file.
+% Section composition mirrors 02-awesome-cv-summary:
+%   Summary -> Patents -> Publications -> Research & Professional Experience
+%   -> Education -> Honors & Awards   (no Projects / Skills section)
+%------------------------
+
+\documentclass[letterpaper,11pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\usepackage{iftex}
+\ifPDFTeX
+  \input{glyphtounicode}
+  \pdfgentounicode=1
+\fi
+
+
+\pagestyle{fancy}
+\fancyhf{} % clear all header and footer fields
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% Adjust margins
+\addtolength{\oddsidemargin}{-0.5in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1in}
+\addtolength{\topmargin}{-.5in}
+\addtolength{\textheight}{1.0in}
+
+\urlstyle{same}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Sections formatting
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+
+%-------------------------
+% Custom commands
+\newcommand{\resumeItem}[1]{
+  \item\small{
+    {#1 \vspace{-2pt}}
+  }
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-2pt}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeProjectHeading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \small#1 & #2 \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+% Small-caps sub-label inside a no-bullet list (mirrors awesome-cv \cvsubsection)
+\newcommand{\resumeSubLabel}[1]{\item {\scshape\small #1}\vspace{-3pt}}
+
+\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.15in, label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+%-------------------------------------------
+\begin{document}
+
+%----------HEADING----------
+\begin{center}
+    \textbf{\Huge \scshape << person.first_name >> << person.last_name >>} \\ \vspace{1pt}
+    \small << person.phone >> $|$
+    \href{mailto:<< person.email >>}{\underline{<< person.email >>}} $|$
+    \href{<< person.homepage_url >>}{\underline{<< person.homepage >>}} $|$
+    \href{https://github.com/<< person.github >>}{\underline{github.com/<< person.github >>}} $|$
+    \href{https://linkedin.com/in/<< person.linkedin >>}{\underline{linkedin.com/in/<< person.linkedin >>}}
+\end{center}
+
+
+%-----------SUMMARY-----------
+\section{Summary}
+{\small << summary >>}
+\vspace{2pt}
+
+
+%-----------PATENTS-----------
+\section{Patents}
+  \resumeSubHeadingListStart
+    <% for pat in patents %>
+    \item\small{\makebox[1.6cm][l]{<< pat.date_short >>}\textbf{<< pat.title >>}, << pat.number >>}
+    <% endfor %>
+  \resumeSubHeadingListEnd
+
+
+%-----------PUBLICATIONS-----------
+\section{Publications}
+  \resumeSubHeadingListStart
+    \resumeSubLabel{Journal Articles}
+    <% for pub in publications.journals %>
+    \item\small{<< pub.authors >>, ``<< pub.title >>,'' <% if pub.details == "under review" %>under review at \textit{<< pub.venue >>}, << pub.year >><% else %>\textit{<< pub.venue >>}, << pub.details >><% endif %>.}
+    <% endfor %>
+    \vspace{2pt}
+    \resumeSubLabel{Conference Papers}
+    <% for pub in publications.conferences %>
+    \item\small{<< pub.authors >>, ``<< pub.title >>,'' in \textit{<< pub.venue >>}<% if pub.details is defined %>, << pub.details >><% endif %>, << pub.year >>.<% if pub.note is defined %> << pub.note >><% endif %><% if pub.award is defined %> \textbf{<< pub.award >>}<% endif %>}
+    <% endfor %>
+  \resumeSubHeadingListEnd
+
+
+%-----------RESEARCH & PROFESSIONAL EXPERIENCE-----------
+\section{Research \& Professional Experience}
+  \resumeSubHeadingListStart
+    <% for e in experience %>
+    \resumeSubheading
+      {<< e.role >>}{<< e.start | replace(". ", ".\\ ") >> -- << e.end | replace(". ", ".\\ ") >>}
+      {<< e.org_short if e.org_short is defined else e.org >>}{<< e.location_short if e.location_short is defined else e.location >>}
+      \resumeItemListStart
+        <% for b in e.bullets %>
+        \resumeItem{<< b >>}
+        <% endfor %>
+      \resumeItemListEnd
+    <% endfor %>
+  \resumeSubHeadingListEnd
+
+
+%-----------EDUCATION-----------
+\section{Education}
+  \resumeSubHeadingListStart
+    <% for ed in education %>
+    \resumeSubheading
+      {<< ed.org >>}{<< ed.location >>}
+      {<< ed.degree_short | replace(". ", ".\\ ") >>, GPA << ed.gpa_compact >><% if "(" in ed.gpa %> (<< ed.gpa.split("(")[1].rstrip(")") | replace("%", "\\%") >>)<% endif %>}{<< ed.start | replace(". ", ".\\ ") >> -- << ed.end | replace(". ", ".\\ ") >>}
+    <% endfor %>
+  \resumeSubHeadingListEnd
+
+
+%-----------HONORS & AWARDS-----------
+\section{Honors \& Awards}
+  \resumeSubHeadingListStart
+    \resumeSubLabel{Major Awards}
+    <% for h in honors.major_awards %>
+    \item\small{\makebox[1.6cm][l]{<< h.date | replace(". ", ".\\ ") >>}\textbf{<< h.name >>}, << h.event >>}
+    <% endfor %>
+    \vspace{2pt}
+    \resumeSubLabel{Academic Recognition}
+    <% for h in honors.academic_recognition %>
+    \item\small{\makebox[1.6cm][l]{<< h.date | replace(". ", ".\\ ") >>}\textbf{<< h.name >>}, << h.event >>}
+    <% endfor %>
+  \resumeSubHeadingListEnd
+
+
+%-------------------------------------------
+\end{document}

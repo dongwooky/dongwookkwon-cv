@@ -1,0 +1,196 @@
+%-------------------------
+% Upstream Jake Gutierrez Resume Template
+% Source: https://github.com/jakegut/resume (MIT)
+% GENERATED FROM data/cv.yaml — edit yaml + run scripts/sync.py, not this file.
+% Section composition mirrors 02-awesome-cv-summary:
+%   Summary -> Patents -> Publications -> Research & Professional Experience
+%   -> Education -> Honors & Awards   (no Projects / Skills section)
+%------------------------
+
+\documentclass[letterpaper,11pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\usepackage{iftex}
+\ifPDFTeX
+  \input{glyphtounicode}
+  \pdfgentounicode=1
+\fi
+
+
+\pagestyle{fancy}
+\fancyhf{} % clear all header and footer fields
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% Adjust margins
+\addtolength{\oddsidemargin}{-0.5in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1in}
+\addtolength{\topmargin}{-.5in}
+\addtolength{\textheight}{1.0in}
+
+\urlstyle{same}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Sections formatting
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+
+%-------------------------
+% Custom commands
+\newcommand{\resumeItem}[1]{
+  \item\small{
+    {#1 \vspace{-2pt}}
+  }
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-2pt}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeProjectHeading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \small#1 & #2 \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+% Small-caps sub-label inside a no-bullet list (mirrors awesome-cv \cvsubsection)
+\newcommand{\resumeSubLabel}[1]{\item {\scshape\small #1}\vspace{-3pt}}
+
+\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.15in, label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+%-------------------------------------------
+\begin{document}
+
+%----------HEADING----------
+\begin{center}
+    \textbf{\Huge \scshape Dongwook Kwon} \\ \vspace{1pt}
+    \small +82 10-6612-9246 $|$
+    \href{mailto:dwkwon@suresofttech.com}{\underline{dwkwon@suresofttech.com}} $|$
+    \href{https://dongwooky.github.io}{\underline{dongwooky.github.io}} $|$
+    \href{https://github.com/dongwooky}{\underline{github.com/dongwooky}} $|$
+    \href{https://linkedin.com/in/dongwooky}{\underline{linkedin.com/in/dongwooky}}
+\end{center}
+
+
+%-----------SUMMARY-----------
+\section{Summary}
+{\small Highly accomplished AI Research Engineer specializing in Large Language Model (LLM) optimization, Multi-Agent Systems (MAS), and AI-driven anomaly detection for critical infrastructure. Demonstrated research excellence through co-first authored publications in top-tier peer-reviewed venues, including an Oral presentation at EMNLP 2025 and a paper at ACL 2026 (both Industry Tracks), developed in collaboration with LG Electronics. Inventor of multiple registered patents in network and medical device anomaly detection. A core engineer who spearheaded the technical development and software delivery of a critical agent-based codebase for Hyundai Motor Company. With foundational research experience in nuclear cybersecurity and medical cyber-physical systems, poised to significantly advance the United States' technological edge in critical and emerging fields by engineering scalable, reliable, and secure autonomous AI architectures.}
+\vspace{2pt}
+
+
+%-----------PATENTS-----------
+\section{Patents}
+  \resumeSubHeadingListStart
+    \item\small{\makebox[1.6cm][l]{Apr 2026}\textbf{Method for Implantable Medical Device to Detect Anomaly in Real Time}, KR 10-2961984}
+    \item\small{\makebox[1.6cm][l]{Aug 2025}\textbf{GPT API-Based Network Anomaly Detection}, KR 10-2848814}
+  \resumeSubHeadingListEnd
+
+
+%-----------PUBLICATIONS-----------
+\section{Publications}
+  \resumeSubHeadingListStart
+    \resumeSubLabel{Journal Articles}
+    \item\small{Y.~Nam, J.~Lee, H.~Lee, \textbf{D.~Kwon}, M.~Yeo, S.~Kim, R.~Sohn, and C.~Park, ``Designing a remote photoplethysmography-based heart rate estimation algorithm during a treadmill exercise,'' \textit{Electronics}, vol.~14, no.~5, p.~890, 2025.}
+    \item\small{\textbf{D.~Kwon}, Y.~Kang, J.~Lee, Y.~Nam, J.~Won, K.~K.~Kim, D.~D.~Kim, and C.~Park, ``Graph-Enhanced Bidirectional GRU for Anomaly Detection in Power Generation Environments,'' under review at \textit{Data Mining and Knowledge Discovery (Springer Nature)}, 2025.}
+    \vspace{2pt}
+    \resumeSubLabel{Conference Papers}
+    \item\small{R.~Chang$^{\dagger}$, \textbf{D.~Kwon}$^{\dagger}$, J.~Lee$^{\dagger}$, and N.~Verma, ``CascadeDebate: Multi-Agent Deliberation for Cost-Aware LLM Cascades,'' in \textit{Proc.~64th Annu.\ Meeting Assoc.\ Comput.\ Linguistics (ACL) --- Industry Track (Poster)}, 2026. $^{\dagger}$Equal contribution.}
+    \item\small{J.~Lee$^{\dagger}$, R.~Chang$^{\dagger}$, \textbf{D.~Kwon}$^{\dagger}$, H.~Singh, and N.~Verma, ``GEMMAS: Graph-based Evaluation Metrics for Multi Agent Systems,'' in \textit{Proceedings of the EMNLP 2025 Industry Track (Oral)}, 2025. $^{\dagger}$Equal contribution.}
+    \item\small{\textbf{D.~Kwon}, M.~Kim, Y.~Kang, J.~Lee, and C.~Park, ``Hybrid neural network model for anomaly detection in implantable devices using graph attention networks and transformers,'' in \textit{Proc.\ 10th Int.\ Biomed.\ Eng.\ Conf.\ (IBEC)}, 2024. \textbf{Best Poster Award --- Silver.}}
+    \item\small{\textbf{D.~Kwon}, Y.~Kang, and C.~Park, ``Enhancing medical device security with GNN-GRU anomaly detection model,'' in \textit{Proc.\ 62nd KOSOMBE Autumn Conf.}, pp.~204--205, 2023. \textbf{Outstanding Paper Award.}}
+  \resumeSubHeadingListEnd
+
+
+%-----------RESEARCH & PROFESSIONAL EXPERIENCE-----------
+\section{Research \& Professional Experience}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {AI Engineer, Intelligent Agent Technology Team}{Dec.\ 2025 -- Present}
+      {Suresoft Technologies}{Seongnam, Korea}
+      \resumeItemListStart
+        \resumeItem{Developing an AI validation system utilizing AI agent--based architectures for enterprise model verification.}
+        \resumeItem{Designing autonomous and collaborative AI agents that verify and evaluate machine-learning models at scale.}
+        \resumeItem{Building agentic AI systems to enable systematic, scalable, and reliable AI verification processes.}
+      \resumeItemListEnd
+    \resumeSubheading
+      {Research Assistant}{Aug.\ 2021 -- Dec.\ 2025}
+      {Bio-Computing \& ML Lab, Kwangwoon University}{Seoul, Korea}
+      \resumeItemListStart
+        \resumeItem{Researched deep-learning algorithms for anomaly detection in time-series data (ECG, cyber-physical systems).}
+        \resumeItem{Co-developed an Active Kill-Switch and Biomarker-Based Defense System for life-threatening IoT medical devices.}
+        \resumeItem{Published in EMNLP 2025 (Oral) and ACL 2026; co-author on two granted Republic of Korea patents.}
+      \resumeItemListEnd
+    \resumeSubheading
+      {Visiting Researcher}{Jan.\ 2025 -- Jul.\ 2025}
+      {LG Electronics Canada}{Toronto, ON, Canada}
+      \resumeItemListStart
+        \resumeItem{Built an LLM-driven assessment framework for evaluating performance of agentic AI systems.}
+        \resumeItem{Work fed directly into peer-reviewed publications at EMNLP 2025 and ACL 2026.}
+      \resumeItemListEnd
+    \resumeSubheading
+      {AI Development Project Participant, Summer Program}{Jul.\ 2022 -- Aug.\ 2022}
+      {Qualcomm Institute, UC San Diego}{San Diego, CA, USA}
+      \resumeItemListStart
+        \resumeItem{Built a personality-based drug-addiction prediction system using machine-learning models.}
+        \resumeItem{Recognized with the program's Achievement Award.}
+      \resumeItemListEnd
+  \resumeSubHeadingListEnd
+
+
+%-----------EDUCATION-----------
+\section{Education}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {Kwangwoon University}{Seoul, Korea}
+      {M.S.\ in Computer Engineering, GPA 4.33 / 4.5 (98.1\%)}{Mar.\ 2024 -- Feb.\ 2026}
+    \resumeSubheading
+      {University of Toronto}{Toronto, ON, Canada}
+      {Graduate Research Program, GPA 3.68 / 4.0}{Jan.\ 2025 -- Jul.\ 2025}
+    \resumeSubheading
+      {Kwangwoon University}{Seoul, Korea}
+      {B.S.\ in Electronics and Communications Engineering, GPA 3.41 / 4.5 (88.1\%)}{Mar.\ 2019 -- Feb.\ 2024}
+  \resumeSubHeadingListEnd
+
+
+%-----------HONORS & AWARDS-----------
+\section{Honors \& Awards}
+  \resumeSubHeadingListStart
+    \resumeSubLabel{Major Awards}
+    \item\small{\makebox[1.6cm][l]{Aug.\ 2022}\textbf{Achievement Award}, Qualcomm Institute AI Development Project --- UC San Diego}
+    \item\small{\makebox[1.6cm][l]{Dec.\ 2021}\textbf{Gold Award (Ministerial Award)}, 2021 Smart Maritime Logistics Project --- Minister of Oceans and Fisheries}
+    \vspace{2pt}
+    \resumeSubLabel{Academic Recognition}
+    \item\small{\makebox[1.6cm][l]{Nov.\ 2025}\textbf{Outstanding Student Paper Award}, Conference of the Institute of Electronics and Information Engineers}
+    \item\small{\makebox[1.6cm][l]{Nov.\ 2024}\textbf{Best Poster Award (Silver)}, 10th International Biomedical Engineering Conference (IBEC 2024)}
+    \item\small{\makebox[1.6cm][l]{Nov.\ 2023}\textbf{Outstanding Paper Award}, Conference of the Korean Society of Medical and Biological Engineering}
+  \resumeSubHeadingListEnd
+
+
+%-------------------------------------------
+\end{document}
