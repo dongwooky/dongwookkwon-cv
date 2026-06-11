@@ -119,6 +119,7 @@ Highly accomplished AI Research Engineer specializing in Large Language Model (L
   *Best Poster Award — Silver*
 - **D. Kwon**, Y. Kang, and C. Park, "Enhancing medical device security with GNN-GRU anomaly detection model," in *Proc. 62nd KOSOMBE Autumn Conf.*, 2023.
   *Outstanding Paper Award*
+- J. Yang, J. Kim, J. Lee, H. Ryu, **D. Kwon**, S. Yeo, P. Kim, Y. Kim, J. Lim, H. Yoon, and C. Park, "Metaverse: Design of the Car Price Prediction Model Through a Machine-learning Approach," in *Proc. IEEE Int. Conf. Metaverse Computing, Networking and Applications (MetaCom)*, 2023.
 
 ---
 

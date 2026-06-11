@@ -281,6 +281,14 @@ publications:
       year: 2023
       award: Outstanding Paper Award.
 
+    - authors: J.~Yang, J.~Kim, J.~Lee, H.~Ryu, \textbf{D.~Kwon}, S.~Yeo, P.~Kim, Y.~Kim, J.~Lim, H.~Yoon, and C.~Park
+      title: "Metaverse: Design of the Car Price Prediction Model Through a Machine-learning Approach"
+      title_short: Metaverse car-price prediction via machine learning
+      venue: Proc.\ IEEE Int.\ Conf.\ Metaverse Computing, Networking and Applications (MetaCom)
+      venue_short: IEEE MetaCom 2023
+      details: "pp.~734--737"
+      year: 2023
+
 # ---------------------------------------------------------------------------
 patents:
   - title: Method for Implantable Medical Device to Detect Anomaly in Real Time
