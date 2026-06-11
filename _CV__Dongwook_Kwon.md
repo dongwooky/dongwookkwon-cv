@@ -10,7 +10,7 @@
 
 ## Summary
 
-Highly accomplished AI Research Engineer specializing in Large Language Model (LLM) optimization, Multi-Agent Systems (MAS), and AI-driven anomaly detection for critical infrastructure. Demonstrated research excellence through co-first authored publications in top-tier peer-reviewed venues, including an Oral presentation at EMNLP 2025 and a paper at ACL 2026 (both Industry Tracks), developed in collaboration with LG Electronics. Inventor of multiple registered patents in network and medical device anomaly detection. A core engineer who spearheaded the technical development and software delivery of a critical agent-based codebase for Hyundai Motor Company. With foundational research experience in nuclear cybersecurity and medical cyber-physical systems, poised to significantly advance the United States' technological edge in critical and emerging fields by engineering scalable, reliable, and secure autonomous AI architectures.
+Highly accomplished AI Research Engineer specializing in Large Language Model (LLM) optimization, Multi-Agent Systems (MAS), and AI-driven anomaly detection for critical infrastructure. Demonstrated research excellence through co-first authored publications in top-tier peer-reviewed venues, including an Oral presentation at EMNLP 2025 and a paper at ACL 2026 (both Industry Tracks), developed in collaboration with LG Electronics. Inventor of multiple registered patents in network and medical device anomaly detection. A core engineer who engineered and delivered a critical agent-based codebase for a mission-critical vehicle control data project for Hyundai Motor Company. With foundational research experience in nuclear cybersecurity and medical cyber-physical systems, poised to significantly advance the United States' technological edge in critical and emerging fields by engineering scalable, reliable, and secure autonomous AI architectures.
 
 ---
 
@@ -20,7 +20,7 @@ Highly accomplished AI Research Engineer specializing in Large Language Model (L
 **AI Engineer, Intelligent Agent Technology Team** *(Dec. 2025 – Present)*
 - Developing an AI validation system utilizing AI agent–based architectures for enterprise model verification.
 - Designing autonomous and collaborative AI agents that verify and evaluate machine-learning models at scale.
-- Building agentic AI systems to enable systematic, scalable, and reliable AI verification processes.
+- Engineered and delivered a critical agent-based codebase for a mission-critical vehicle control data project for Hyundai Motor Company.
 
 ### Bio-Computing and Machine Learning Laboratory, Kwangwoon University — Seoul, Korea
 **Research Assistant** *(Aug. 2021 – Dec. 2025)*
