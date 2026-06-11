@@ -44,9 +44,18 @@
 
 %-------------------------------------------------------------------------------
 \cvsection{Patents}
+
+\cvsubsection{Registered}
 \begin{cvhonors}
-  <% for pat in patents %>
-  \cvhonor{<< pat.title >>}{<< pat.number >><% if pat.pending is defined %> (Pending)<% endif %>}{Republic of Korea}{<< pat.date_short >>}
+  <% for pat in patents if pat.pending is not defined %>
+  \cvhonor{<< pat.title >>}{<< pat.number >>}{Republic of Korea}{<< pat.date_short >>}
+  <% endfor %>
+\end{cvhonors}
+
+\cvsubsection{Pending Applications}
+\begin{cvhonors}
+  <% for pat in patents if pat.pending is defined %>
+  \cvhonor{<< pat.title >>}{<< pat.number >>}{Republic of Korea}{<< pat.date_short >>}
   <% endfor %>
 \end{cvhonors}
 

@@ -107,8 +107,14 @@
 %-----------PATENTS-----------
 \section{Patents}
   \resumeSubHeadingListStart
-    <% for pat in patents %>
-    \item\small{\makebox[1.6cm][l]{<< pat.date_short >>}\textbf{<< pat.title >>}, << pat.number >><% if pat.pending is defined %> (Pending)<% endif %>}
+    \resumeSubLabel{Registered}
+    <% for pat in patents if pat.pending is not defined %>
+    \item\small{\makebox[1.6cm][l]{<< pat.date_short >>}\textbf{<< pat.title >>}, << pat.number >>}
+    <% endfor %>
+    \vspace{2pt}
+    \resumeSubLabel{Pending Applications}
+    <% for pat in patents if pat.pending is defined %>
+    \item\small{\makebox[1.6cm][l]{<< pat.date_short >>}\textbf{<< pat.title >>}, << pat.number >>}
     <% endfor %>
   \resumeSubHeadingListEnd
 

@@ -148,9 +148,14 @@
       << pub.authors >>, ``<< pub.title >>.'' Under review at \textit{<< pub.venue >>}, << pub.year >>.
     }
     <% endfor %>
-    <% for pat in patents %>
+    <% for pat in patents if pat.pending is not defined %>
     \item\small{
-      Patent \textbf{<< pat.number >>}<% if pat.pending is defined %> (Pending)<% endif %> --- << pat.title_short if pat.title_short is defined else pat.title >> (<< pat.date_short >>).
+      Patent \textbf{<< pat.number >>} --- << pat.title_short if pat.title_short is defined else pat.title >> (<< pat.date_short >>).
+    }
+    <% endfor %>
+    <% for pat in patents if pat.pending is defined %>
+    \item\small{
+      Patent \textbf{<< pat.number >>} (Pending) --- << pat.title_short if pat.title_short is defined else pat.title >> (<< pat.date_short >>).
     }
     <% endfor %>
   \resumeSubHeadingListEnd
