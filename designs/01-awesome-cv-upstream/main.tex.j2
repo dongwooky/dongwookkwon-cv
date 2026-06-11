@@ -13,7 +13,7 @@
 \renewcommand{\acvHeaderSocialSep}{\quad\textbar\quad}
 
 \name{<< person.first_name >>}{<< person.last_name >>}
-\position{<< person.position | replace("▪", "{\\enskip\\cdotp\\enskip}") >>}
+% \position intentionally omitted — no role subtitle under the name
 \address{<< person.address_line1 >>, << person.address_line2 >>}
 \mobile{(<< person.phone.split(" ")[0] >>) << person.phone.split(" ", 1)[1] >>}
 \email{<< person.email >>}
