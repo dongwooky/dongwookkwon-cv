@@ -46,7 +46,7 @@
 \cvsection{Patents}
 \begin{cvhonors}
   <% for pat in patents %>
-  \cvhonor{<< pat.title >>}{<< pat.number >>}{Republic of Korea}{<< pat.date_short >>}
+  \cvhonor{<< pat.title >>}{<< pat.number >><% if pat.pending is defined %> (Pending)<% endif %>}{Republic of Korea}{<< pat.date_short >>}
   <% endfor %>
 \end{cvhonors}
 

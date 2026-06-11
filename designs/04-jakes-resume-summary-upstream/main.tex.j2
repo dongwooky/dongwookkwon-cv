@@ -108,7 +108,7 @@
 \section{Patents}
   \resumeSubHeadingListStart
     <% for pat in patents %>
-    \item\small{\makebox[1.6cm][l]{<< pat.date_short >>}\textbf{<< pat.title >>}, << pat.number >>}
+    \item\small{\makebox[1.6cm][l]{<< pat.date_short >>}\textbf{<< pat.title >>}, << pat.number >><% if pat.pending is defined %> (Pending)<% endif %>}
     <% endfor %>
   \resumeSubHeadingListEnd
 

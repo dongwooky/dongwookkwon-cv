@@ -92,7 +92,7 @@
 %---------------- PATENTS ----------------
 \section{Patents}
 <% for pat in patents %>
-\cvitem{<< pat.date_short >>}{\textbf{Issued Patent}, ``<< pat.title >>,'' << pat.number >>.}
+\cvitem{<< pat.date_short >>}{\textbf{<% if pat.pending is defined %>Patent Application<% else %>Issued Patent<% endif %>}, ``<< pat.title >>,'' << pat.number >>.}
 <% endfor %>
 
 %---------------- LEADERSHIP ----------------

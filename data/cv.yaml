@@ -295,6 +295,12 @@ patents:
     date: August 18, 2025
     date_short: Aug 2025
 
+  - title: Categorical Data of Networks Based Network Anomaly Detection Apparatus and Method Thereof
+    number: KR Patent App. No. 10-2024-0110559
+    date: August 2024
+    date_short: Aug 2024
+    pending: true
+
 # ---------------------------------------------------------------------------
 leadership:
   - role: President
