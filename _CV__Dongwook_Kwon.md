@@ -26,7 +26,6 @@ Highly accomplished AI Research Engineer specializing in Large Language Model (L
 **Research Assistant** *(Aug. 2021 – Dec. 2025)*
 - Researched deep-learning algorithms for anomaly detection in complex time-series data, focusing on critical cyber-physical systems including nuclear power generation environments.
 - Co-developed an Active Kill-Switch and Biomarker-Based Defense System for life-threatening IoT medical devices.
-- Published in EMNLP 2025 (Oral) and ACL 2026; co-author on two granted Republic of Korea patents.
 
 ### LG Electronics Canada (with University of Toronto) — Toronto, ON, Canada
 **Visiting Researcher** *(Jan. 2025 – Jul. 2025)*
