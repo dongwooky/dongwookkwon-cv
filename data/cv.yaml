@@ -289,6 +289,12 @@ patents:
     date: April 30, 2026
     date_short: Apr 2026
 
+  - title: System for Anomaly Detection Using a Collaborative Multi-AI Determination Module Based on LLM
+    number: KR 10-2025-0160217
+    date: October 2025
+    date_short: Oct 2025
+    pending: true
+
   - title: GPT API-Based Network Anomaly Detection
     number: KR 10-2848814
     date: August 18, 2025

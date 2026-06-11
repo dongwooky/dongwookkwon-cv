@@ -124,6 +124,7 @@ Highly accomplished AI Research Engineer specializing in Large Language Model (L
 
 ## Patents
 - **Issued Patent**, "Method for Implantable Medical Device to Detect Anomaly in Real Time", Patent No. KR 10-2961984, Issued on April 30, 2026.
+- **Issued Patent**, "System for Anomaly Detection Using a Collaborative Multi-AI Determination Module Based on LLM", Patent No. KR 10-2025-0160217, Issued on October 2025.
 - **Issued Patent**, "GPT API-Based Network Anomaly Detection", Patent No. KR 10-2848814, Issued on August 18, 2025.
 - **Issued Patent**, "Categorical Data of Networks Based Network Anomaly Detection Apparatus and Method Thereof", Patent No. KR 10-2024-0110559, Issued on August 2024.
 
