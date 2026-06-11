@@ -150,7 +150,7 @@
     <% endfor %>
     <% for pat in patents %>
     \item\small{
-      <% if pat.pending is defined %>\textbf{<< pat.number >>} (Pending) --- << pat.title_short if pat.title_short is defined else pat.title >> (<< pat.date_short >>).<% else %>Patent \textbf{<< pat.number >>} --- << pat.title_short if pat.title_short is defined else pat.title >> (<< pat.date_short >>).<% endif %>
+      Patent \textbf{<< pat.number >>}<% if pat.pending is defined %> (Pending)<% endif %> --- << pat.title_short if pat.title_short is defined else pat.title >> (<< pat.date_short >>).
     }
     <% endfor %>
   \resumeSubHeadingListEnd
