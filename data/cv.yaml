@@ -24,9 +24,10 @@ summary: >-
   including an Oral presentation at EMNLP 2025 and a paper at ACL 2026 (both
   Industry Tracks), developed in collaboration with LG Electronics. Inventor
   of multiple registered patents in network and medical device anomaly
-  detection. A core engineer who spearheaded the technical development and
-  software delivery of a critical agent-based codebase for Hyundai Motor
-  Company. With foundational research experience in nuclear cybersecurity and
+  detection. A core engineer who engineered and delivered a critical
+  agent-based codebase for a mission-critical vehicle control data project for
+  Hyundai Motor Company. With foundational research experience in nuclear
+  cybersecurity and
   medical cyber-physical systems, poised to significantly advance the United
   States' technological edge in critical and emerging fields by engineering
   scalable, reliable, and secure autonomous AI architectures.
@@ -50,7 +51,7 @@ experience:
     bullets:
       - Developing an AI validation system utilizing AI agent--based architectures for enterprise model verification.
       - Designing autonomous and collaborative AI agents that verify and evaluate machine-learning models at scale.
-      - Building agentic AI systems to enable systematic, scalable, and reliable AI verification processes.
+      - Engineered and delivered a critical agent-based codebase for a mission-critical vehicle control data project for Hyundai Motor Company.
     bullets_compact:
       - Developing AI validation system using agentic AI architectures for enterprise model verification.
       - Designing autonomous and collaborative agents for systematic AI verification.
