@@ -111,7 +111,7 @@ Highly accomplished AI Research Engineer specializing in Large Language Model (L
 ### Journal Articles
 - Y. Nam, J. Lee, H. Lee, **D. Kwon**, M. Yeo, S. Kim, R. Sohn, and C. Park, "Designing a remote photoplethysmography-based heart rate estimation algorithm during a treadmill exercise," *Electronics*, vol. 14, no. 5, p. 890, 2025.- **D. Kwon**, Y. Kang, J. Lee, Y. Nam, J. Won, K. K. Kim, D. D. Kim, and C. Park, "Graph-Enhanced Bidirectional GRU for Anomaly Detection in Power Generation Environments," under review at *Data Mining and Knowledge Discovery (Springer Nature)*, 2025.
 ### Conference Papers
-- R. Chang†, **D. Kwon**†, J. Lee†, and N. Verma, "CascadeDebate: Multi-Agent Deliberation for Cost-Aware LLM Cascades," in *Proc. 64th Annu. Meeting Assoc. Comput. Linguistics (ACL) — Industry Track (Poster)*, 2026.
+- R. Chang†, **D. Kwon**†, J. Lee†, and N. Verma, "CascadeDebate: Multi-Agent Deliberation for Cost-Aware LLM Cascades," in *Proc. 64th Annu. Meeting Assoc. Comput. Linguistics (ACL), Industry Track (Poster)*, 2026.
   †Equal contribution.
 - J. Lee†, R. Chang†, **D. Kwon**†, H. Singh, and N. Verma, "GEMMAS: Graph-based Evaluation Metrics for Multi Agent Systems," in *Proceedings of the EMNLP 2025 Industry Track (Oral)*, 2025.
   †Equal contribution.

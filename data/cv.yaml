@@ -253,15 +253,17 @@ publications:
   conferences:
     - authors: R.~Chang$^{\dagger}$, \textbf{D.~Kwon}$^{\dagger}$, J.~Lee$^{\dagger}$, and N.~Verma
       title: "CascadeDebate: Multi-Agent Deliberation for Cost-Aware LLM Cascades"
-      venue: Proc.~64th Annu.\ Meeting Assoc.\ Comput.\ Linguistics (ACL) --- Industry Track (Poster)
-      venue_short: ACL 2026 --- Industry Track (Poster)
+      venue: Proc.~64th Annu.\ Meeting Assoc.\ Comput.\ Linguistics (ACL), Industry Track (Poster)
+      venue_short: ACL 2026, Industry Track (Poster)
+      details: "pp.~1329--1340"
       year: 2026
       note: $^{\dagger}$Equal contribution.
 
     - authors: J.~Lee$^{\dagger}$, R.~Chang$^{\dagger}$, \textbf{D.~Kwon}$^{\dagger}$, H.~Singh, and N.~Verma
       title: "GEMMAS: Graph-based Evaluation Metrics for Multi Agent Systems"
       venue: Proceedings of the EMNLP 2025 Industry Track (Oral)
-      venue_short: EMNLP 2025 --- Industry Track (Oral)
+      venue_short: EMNLP 2025, Industry Track (Oral)
+      details: "pp.~1522--1532"
       year: 2025
       note: $^{\dagger}$Equal contribution.
 
