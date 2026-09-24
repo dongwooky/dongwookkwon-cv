@@ -81,6 +81,9 @@
 }
 
 %-------------------------------------------------------------------------------
+% Conditional page break: if less than ~8 lines remain, move the heading to the
+% next page with its first entry instead of leaving it orphaned.
+\vspace{0pt plus 8\baselineskip}\penalty-200\vspace{0pt plus -8\baselineskip}
 \cvsection{Research \& Professional Experience}
 \begin{cventries}
   <% for e in experience %>
