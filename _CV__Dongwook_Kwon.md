@@ -10,7 +10,7 @@
 
 ## Summary
 
-Highly accomplished AI Research Engineer specializing in Large Language Model (LLM) optimization, Multi-Agent Systems (MAS), and AI-driven anomaly detection for critical infrastructure. Demonstrated research excellence through co-first authored publications in top-tier peer-reviewed venues, including an Oral presentation at EMNLP 2025 and a paper at ACL 2026 (both Industry Tracks), developed in collaboration with LG Electronics. Inventor of multiple registered patents in network and medical device anomaly detection. A core engineer who engineered and delivered a critical agent-based codebase for a mission-critical vehicle control data project for Hyundai Motor Company. With foundational research experience in nuclear cybersecurity and medical cyber-physical systems, poised to significantly advance the United States' technological edge in critical and emerging fields by engineering scalable, reliable, and secure autonomous AI architectures.
+Highly accomplished AI Research Engineer specializing in Large Language Model (LLM) optimization, Multi-Agent Systems (MAS), and AI-driven anomaly detection for critical infrastructure. Demonstrated research excellence through co-first authored publications in top-tier peer-reviewed venues, including an Oral presentation at EMNLP 2025 and a paper at ACL 2026 (both Industry Tracks), developed in collaboration with LG Electronics, and a first-authored journal article in Data Mining and Knowledge Discovery (Springer Nature) on anomaly detection for industrial control systems in power generation. Inventor of multiple registered patents in network and medical device anomaly detection. A core engineer who engineered and delivered a critical agent-based codebase for a mission-critical vehicle control data project for Hyundai Motor Company. With foundational research experience in nuclear cybersecurity and medical cyber-physical systems, poised to significantly advance the United States' technological edge in critical and emerging fields by engineering scalable, reliable, and secure autonomous AI architectures.
 
 ---
 
@@ -109,7 +109,7 @@ Highly accomplished AI Research Engineer specializing in Large Language Model (L
 ## Publications
 
 ### Journal Articles
-- Y. Nam, J. Lee, H. Lee, **D. Kwon**, M. Yeo, S. Kim, R. Sohn, and C. Park, "Designing a remote photoplethysmography-based heart rate estimation algorithm during a treadmill exercise," *Electronics*, vol. 14, no. 5, p. 890, 2025.- **D. Kwon**, Y. Kang, J. Lee, Y. Nam, J. Won, K. K. Kim, D. D. Kim, and C. Park, "Graph-Enhanced Bidirectional GRU for Anomaly Detection in Power Generation Environments," under review at *Data Mining and Knowledge Discovery (Springer Nature)*, 2025.
+- **D. Kwon**, Y. Kang, J. Lee, Y. Nam, J. Won, K. K. Kim, D. D. Kim, and C. Park, "Graph-Enhanced Bidirectional GRU for Anomaly Detection in Power Generation Environments," *Data Mining and Knowledge Discovery*, vol. 40, no. 102, 2026.- Y. Nam, J. Lee, H. Lee, **D. Kwon**, M. Yeo, S. Kim, R. Sohn, and C. Park, "Designing a remote photoplethysmography-based heart rate estimation algorithm during a treadmill exercise," *Electronics*, vol. 14, no. 5, p. 890, 2025.
 ### Conference Papers
 - R. Chang†, **D. Kwon**†, J. Lee†, and N. Verma, "CascadeDebate: Multi-Agent Deliberation for Cost-Aware LLM Cascades," in *Proc. 64th Annu. Meeting Assoc. Comput. Linguistics (ACL), Industry Track (Poster)*, 2026.
   †Equal contribution.

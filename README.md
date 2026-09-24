@@ -9,8 +9,7 @@
 |---|--------|---------|--------|----------|------|
 | 01 | [awesome-cv](pdfs/01-awesome-cv-upstream.pdf) | 산업계/학계 (종합) | 3 | 빨간 split 헤더, 전 섹션 종합형 | Source Sans 3 / Roboto |
 | 02 | [awesome-cv-summary](pdfs/02-awesome-cv-summary-upstream.pdf) | 산업계/학계 (요약) | 2 | 01 + 상단 Summary, Patents·Publications 우선 배치 | Source Sans 3 / Roboto |
-| 03 | [jakes-resume](pdfs/03-jakes-resume-upstream.pdf) | 산업계 (SWE) | 2 | Jake Gutierrez 표준, 단일단 ATS-친화 (Education·Experience·Projects·Skills) | New Computer Modern |
-| 04 | [jakes-resume-summary](pdfs/04-jakes-resume-summary-upstream.pdf) | 산업계/학계 (요약) | 2 | 03 비주얼 + 02식 구성 (Summary·Patents·Publications 우선, Projects·Skills 없음) | New Computer Modern |
+| 04 | [jakes-resume-summary](pdfs/04-jakes-resume-summary-upstream.pdf) | 산업계/학계 (요약) | 2 | Jake Gutierrez 표준 비주얼 + 02식 구성 (Summary·Patents·Publications 우선, Projects·Skills 없음) | New Computer Modern |
 | 05 | [moderncv](pdfs/05-moderncv-upstream.pdf) | 학계 | 3 | 클래식 moderncv (banking·blue), 종합형 | Latin Modern Sans |
 
 ## 디렉토리 구조
@@ -45,7 +44,7 @@
 ```bash
 # 1) 마스터 데이터 → 각 디자인 main.tex 동기화
 python3 scripts/sync.py            # 전체
-python3 scripts/sync.py 01 03      # 특정 디자인만 (번호 접두사)
+python3 scripts/sync.py 01 04      # 특정 디자인만 (번호 접두사)
 
 # 2) 전체 xelatex 컴파일 → pdfs/ 에 모임
 bash scripts/build-all.sh
