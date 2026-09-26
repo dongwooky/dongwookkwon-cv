@@ -27,8 +27,8 @@ Highly accomplished AI Research Engineer specializing in Large Language Model (L
 - Researched deep-learning algorithms for anomaly detection in complex time-series data, focusing on critical cyber-physical systems including nuclear power generation environments.
 - Co-developed an Active Kill-Switch and Biomarker-Based Defense System for life-threatening IoT medical devices.
 
-### LG Electronics Canada (with University of Toronto) — Toronto, ON, Canada
-**Visiting Researcher** *(Jan. 2025 – Jul. 2025)*
+### University of Toronto (with LG Electronics Toronto AI Lab) — Toronto, ON, Canada
+**Visiting Graduate Researcher** *(Jan. 2025 – Jul. 2025)*
 - Built an LLM-driven assessment framework for evaluating performance of agentic AI systems.
 - Work fed directly into peer-reviewed publications at EMNLP 2025 and ACL 2026.
 

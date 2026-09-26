@@ -72,10 +72,10 @@ experience:
       - Deep-learning anomaly detection in time-series (ECG, cyber-physical systems).
       - EMNLP 2025 (Oral), ACL 2026; two granted KR patents.
 
-  - role: Visiting Researcher
+  - role: Visiting Graduate Researcher
     role_alt: Research Project  # original term from MD
-    org: LG Electronics Canada (with University of Toronto)
-    org_short: LG Electronics Canada
+    org: University of Toronto (with LG Electronics Toronto AI Lab)
+    org_short: University of Toronto
     location: Toronto, ON, Canada
     start: Jan. 2025
     end: Jul. 2025
