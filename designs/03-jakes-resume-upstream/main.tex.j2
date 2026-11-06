@@ -143,9 +143,9 @@
       << pub.authors >>, ``<< pub.title_short if pub.title_short is defined else pub.title >>.'' \textit{<< pub.venue_short >>}.<% if pub.note is defined %> << pub.note >><% endif %><% if pub.award is defined %> \textbf{<< pub.award >>}<% endif %>
     }
     <% endfor %>
-    <% for pub in publications.journals if pub.details == "under review" %>
+    <% for pub in publications.journals if pub.details == "under review" or pub.featured is defined %>
     \item\small{
-      << pub.authors >>, ``<< pub.title >>.'' Under review at \textit{<< pub.venue >>}, << pub.year >>.
+      << pub.authors >>, ``<< pub.title >>.'' <% if pub.details == "under review" %>Under review at \textit{<< pub.venue >>}, << pub.year >><% else %>\textit{<< pub.venue >>}, << pub.details >><% endif %>.
     }
     <% endfor %>
     <% for pat in patents if pat.pending is not defined %>

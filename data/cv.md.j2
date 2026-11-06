@@ -69,7 +69,7 @@
 
 ### Journal Articles
 <% for pub in publications.journals %>
-- << pub.authors | md >>, "<< pub.title >>," <% if pub.details == "under review" %>under review at *<< pub.venue >>*, << pub.year >>.<% else %>*<< pub.venue >>*, << pub.details | md >>.<% endif %>
+- << pub.authors | md >>, "<< pub.title >>," <% if pub.details == "under review" %>under review at *<< pub.venue >>*, << pub.year >><% else %>*<< pub.venue >>*, << pub.details | md >><% endif %>.
 <% endfor %>
 
 ### Conference Papers
@@ -85,7 +85,7 @@
 
 ## Patents
 <% for pat in patents %>
-- **Issued Patent**, "<< pat.title >>", Patent No. << pat.number >>, Issued on << pat.date >>.
+- **<% if pat.pending is defined %>Pending Patent Application<% else %>Issued Patent<% endif %>**, "<< pat.title >>", <% if pat.pending is defined %>Application No. << pat.number >>, Filed << pat.date >><% else %>Patent No. << pat.number >>, Issued on << pat.date >><% endif %>.
 <% endfor %>
 
 ---
