@@ -244,7 +244,7 @@ publications:
     - authors: \textbf{D.~Kwon}, Y.~Kang, J.~Lee, Y.~Nam, J.~Won, K.~K.~Kim, D.~D.~Kim, and C.~Park
       title: Graph-Enhanced Bidirectional GRU for Anomaly Detection in Power Generation Environments
       venue: Data Mining and Knowledge Discovery
-      details: "vol.~40, no.~102, 2026"
+      details: "vol.~40, art.~no.~102, 2026"
       year: 2026
 
     - authors: Y.~Nam, J.~Lee, H.~Lee, \textbf{D.~Kwon}, M.~Yeo, S.~Kim, R.~Sohn, and C.~Park
@@ -296,6 +296,12 @@ publications:
 
 # ---------------------------------------------------------------------------
 patents:
+  - title: Categorical Data of Networks Based Network Anomaly Detection Apparatus and Method Thereof
+    title_short: Network anomaly detection using categorical network data
+    number: KR 10-3043922
+    date: November 2, 2026
+    date_short: Nov 2026
+
   - title: Method for Implantable Medical Device to Detect Anomaly in Real Time
     title_short: Real-time anomaly detection for implantable medical devices
     number: KR 10-2961984
@@ -312,12 +318,6 @@ patents:
     number: KR 10-2848814
     date: August 18, 2025
     date_short: Aug 2025
-
-  - title: Categorical Data of Networks Based Network Anomaly Detection Apparatus and Method Thereof
-    number: KR 10-2024-0110559
-    date: August 2024
-    date_short: Aug 2024
-    pending: true
 
 # ---------------------------------------------------------------------------
 leadership:

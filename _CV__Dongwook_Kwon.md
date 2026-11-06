@@ -109,7 +109,9 @@ Highly accomplished AI Research Engineer specializing in Large Language Model (L
 ## Publications
 
 ### Journal Articles
-- **D. Kwon**, Y. Kang, J. Lee, Y. Nam, J. Won, K. K. Kim, D. D. Kim, and C. Park, "Graph-Enhanced Bidirectional GRU for Anomaly Detection in Power Generation Environments," *Data Mining and Knowledge Discovery*, vol. 40, no. 102, 2026.- Y. Nam, J. Lee, H. Lee, **D. Kwon**, M. Yeo, S. Kim, R. Sohn, and C. Park, "Designing a remote photoplethysmography-based heart rate estimation algorithm during a treadmill exercise," *Electronics*, vol. 14, no. 5, p. 890, 2025.
+- **D. Kwon**, Y. Kang, J. Lee, Y. Nam, J. Won, K. K. Kim, D. D. Kim, and C. Park, "Graph-Enhanced Bidirectional GRU for Anomaly Detection in Power Generation Environments," *Data Mining and Knowledge Discovery*, vol. 40, art. no. 102, 2026.
+- Y. Nam, J. Lee, H. Lee, **D. Kwon**, M. Yeo, S. Kim, R. Sohn, and C. Park, "Designing a remote photoplethysmography-based heart rate estimation algorithm during a treadmill exercise," *Electronics*, vol. 14, no. 5, p. 890, 2025.
+
 ### Conference Papers
 - R. Chang†, **D. Kwon**†, J. Lee†, and N. Verma, "CascadeDebate: Multi-Agent Deliberation for Cost-Aware LLM Cascades," in *Proc. 64th Annu. Meeting Assoc. Comput. Linguistics (ACL), Industry Track (Poster)*, 2026.
   †Equal contribution.
@@ -124,10 +126,10 @@ Highly accomplished AI Research Engineer specializing in Large Language Model (L
 ---
 
 ## Patents
+- **Issued Patent**, "Categorical Data of Networks Based Network Anomaly Detection Apparatus and Method Thereof", Patent No. KR 10-3043922, Issued on November 2, 2026.
 - **Issued Patent**, "Method for Implantable Medical Device to Detect Anomaly in Real Time", Patent No. KR 10-2961984, Issued on April 30, 2026.
-- **Issued Patent**, "System for Anomaly Detection Using a Collaborative Multi-AI Determination Module Based on LLM", Patent No. KR 10-2025-0160217, Issued on October 2025.
+- **Pending Patent Application**, "System for Anomaly Detection Using a Collaborative Multi-AI Determination Module Based on LLM", Application No. KR 10-2025-0160217, Filed October 2025.
 - **Issued Patent**, "GPT API-Based Network Anomaly Detection", Patent No. KR 10-2848814, Issued on August 18, 2025.
-- **Issued Patent**, "Categorical Data of Networks Based Network Anomaly Detection Apparatus and Method Thereof", Patent No. KR 10-2024-0110559, Issued on August 2024.
 
 ---
 
